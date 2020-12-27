@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="91a57b61-75be-45ed-9d6c-5bf0806d47e9" name="webprogramozas.inf.elte.hu" url="http://webprogramozas.inf.elte.hu/hallgatok/g55ofz/phpbead">
+        <fileTransfer rootFolder="/home/hallgatok/g55ofz/www/phpbead" accessType="SFTP" host="webprogramozas.inf.elte.hu" port="22" sshConfigId="6b867436-6a53-437a-b9c8-06d2125e8917" sshConfig="g55ofz@webprogramozas.inf.elte.hu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

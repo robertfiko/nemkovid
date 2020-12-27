@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1mF6C1sHD3gQZtFFq3mGFzqO2t7" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="" />
+      <created>1609076861529</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609076861529</updated>
+      <workItem from="1609076863255" duration="1068000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="560" y="183" key="#Deployment" timestamp="1609078140409">
+      <screen x="0" y="25" width="1920" height="992" />
+    </state>
+    <state x="560" y="183" key="#Deployment/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078140409" />
+    <state x="544" y="170" key="#SSH_Configurations" timestamp="1609078017889">
+      <screen x="0" y="25" width="1920" height="992" />
+    </state>
+    <state x="544" y="170" key="#SSH_Configurations/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078017889" />
+    <state x="867" y="255" width="727" height="531" key="ftp.server.browser" timestamp="1609078136307">
+      <screen x="0" y="25" width="1920" height="992" />
+    </state>
+    <state x="867" y="255" width="727" height="531" key="ftp.server.browser/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078136307" />
+  </component>
+</project>
