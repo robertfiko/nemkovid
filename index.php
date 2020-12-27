@@ -72,11 +72,13 @@
     <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
     <table class="table">
       <tr>
-        <td>Hétfő</td>
-        <td>Kedd</td>
-        <td>Szerda</td>
-        <td>Csütörtök</td>
-        <td>Péntek</td>
+            <th>Hétfő</th>
+            <th>Kedd</th>
+            <th>Szerda</th>
+            <th>Csütörtök</th>
+            <th>Péntek</th>
+            <th>Szombat</th>
+            <th>Vasárnap</th>
 
       </tr>
     </table>
