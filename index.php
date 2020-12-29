@@ -24,6 +24,20 @@
         user-select: none;
       }
 
+      table#calendar {
+          table-layout: fixed;
+          border: darkgrey solid 1px;
+      }
+
+      table#calendar td, table#calendar tr {
+          border: darkgrey solid 1px;
+
+      }
+
+      td.today {
+          color: indianred;
+      }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -45,22 +59,16 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
 
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="register.php">Regisztráció</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.php">Bejelentkezés</a>
+            </li>
+        </ul>
+
     </div>
   </div>
 </nav>
@@ -68,9 +76,14 @@
 <main class="container">
 
   <div class="starter-template text-center py-5 px-3">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-    <table class="table">
+      <table class="" style="table-layout: fixed; width: 100%; margin-bottom: 1rem; vertical-align: top;">
+          <tr>
+              <td> <button id="prev" type="button" class="btn btn-outline-info"><< Előző</button></td>
+              <td id="calHeader">Aktuális</td>
+              <td><button id="next" type="button" class="btn btn-outline-info">Következő >></button></td>
+          </tr>
+      </table>
+    <table class="table" id="calendar">
       <tr>
             <th>Hétfő</th>
             <th>Kedd</th>
@@ -79,15 +92,25 @@
             <th>Péntek</th>
             <th>Szombat</th>
             <th>Vasárnap</th>
-
       </tr>
+        <tr id="loading">
+            <td colspan="7">Betöltés alatt...</td>
+        </tr>
     </table>
   </div>
+
+
 
 </main><!-- /.container -->
 
 
 
       
+
   </body>
+
+
+  <script src="calendarHandler.js"></script>
+
+
 </html>

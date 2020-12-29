@@ -1,9 +1,4 @@
 <?php
-
-$number_of_days = cal_days_in_month(CAL_GREGORIAN, date("m"), date("Y"));
-echo $number_of_days;
-
-
 function getCurrentMonth($currentMonth, $year) {
     //Get the first day of the month and the number of days
     $date = mktime(12, 0, 0, $currentMonth, 1, $year);
@@ -15,36 +10,43 @@ function getCurrentMonth($currentMonth, $year) {
     $row_number = 1;
 
     $calendar = new stdClass();
+    $calendar->year = intval($year);
+    $calendar->month = intval($currentMonth);
     $calendar->offset = $offset;
-
-
+    $calendar->numberOfDays = $numberOfDays;
+    $calendar->days = [];
 
     for ($day = 1; $day <= $numberOfDays; $day++) {
         if (($day + $offset - 1) % 7 == 0 && $day != 1) {
-            echo "</tr> <tr>";
             $row_number++;
         }
-        echo "<td>" . $day . "</td>";
+        $calendar->days[] = $day;
     }
-
-
-    while (($day + $offset) <= $row_number * 7) {
-        echo "<td></td>";
-        $day++;
-    }
-    echo "</tr></table>";
+    $calendar->rows = $row_number;
+    return $calendar;
 }
 
-?>
-<html>
-<head>
-    <title>Calendar of the current month (Dec 2019)</title>
-</head>
-<body>
-<p>Calendar of the Dec 2019</p>
-<?php
-// Dec 2019 in PHP
-showCurrentMonth(12, 2020);
-?>
-</body>
-</html>
+function getCurrentDate() {
+    $curr = new stdClass();
+    $curr->year = date("Y");
+    $curr->month = date("m");
+    $curr->day = date("j");
+    return $curr;
+}
+
+
+
+if (isset($_GET)) {
+    $response = json_decode(file_get_contents('php://input'), true);
+    if (isset($_GET["function"]) && $_GET["function"] == "getCal") {
+        echo json_encode(getCurrentMonth($response["month"], $response["year"]));
+    }
+    else if (isset($_GET["function"]) && $_GET["function"] == "current") {
+        echo json_encode(getCurrentDate());
+    }
+}
+
+
+
+
+
