@@ -45,7 +45,7 @@ function drawCalendar(cal) {
             for (let appointment of cal.days[day-1]) {
                 let a = document.createElement("a");
                 a.innerText = ("0" + appointment.hour).slice(-2) + ":" + ("0" + appointment.minute).slice(-2) + " (" + appointment.current + "/" + appointment.limit + " fő)";
-                a.href="#";
+                a.href="attend.php";
                 if (parseInt(appointment.limit) === parseInt(appointment.current)) {
                     a.classList.add("text-danger")
                 }
