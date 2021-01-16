@@ -1,5 +1,7 @@
 <?php
-function getCurrentMonth($currentMonth, $year) {
+require_once("databaseConnection.php");
+
+function getCurrentMonth($currentMonth, $year, $useDbContent = false) {
     //Get the first day of the month and the number of days
     $date = mktime(12, 0, 0, $currentMonth, 1, $year);
     $numberOfDays = cal_days_in_month(CAL_GREGORIAN, $currentMonth, $year);
@@ -16,11 +18,13 @@ function getCurrentMonth($currentMonth, $year) {
     $calendar->numberOfDays = $numberOfDays;
     $calendar->days = [];
 
-    for ($day = 1; $day <= $numberOfDays; $day++) {
-        if (($day + $offset - 1) % 7 == 0 && $day != 1) {
+
+    for ($dayi = 1; $dayi <= $numberOfDays; $dayi++) {
+        $appointments = getTimeForDay($year, $currentMonth, $dayi);
+        if (($dayi + $offset - 1) % 7 == 0 && $dayi != 1) {
             $row_number++;
         }
-        $calendar->days[] = $day;
+        $calendar->days[] = $appointments;
     }
     $calendar->rows = $row_number;
     return $calendar;
@@ -45,6 +49,13 @@ if (isset($_GET)) {
         echo json_encode(getCurrentDate());
     }
 }
+
+/*
+if (isset($_GET["debug"])) {
+    echo "<pre>";
+    echo json_encode(getCurrentMonth(01, 2021), JSON_PRETTY_PRINT);
+    echo"</pre>";
+}*/
 
 
 

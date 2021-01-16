@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/calendarHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IFileIO.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/databaseConnection.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/date.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/getRoot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calendarHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/calendarHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +60,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -48,11 +76,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -64,6 +93,8 @@
       <option name="presentableId" value="Default" />
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
+      <workItem from="1609274076198" duration="32000" />
+      <workItem from="1610799386819" duration="9166000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -72,25 +103,50 @@
       <option name="project" value="LOCAL" />
       <updated>1609107421908</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Save commit">
+      <created>1609274091690</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609274091690</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Calendar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calendar" />
+    <MESSAGE value="Save commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="560" y="183" key="#Deployment" timestamp="1609106130891">
-      <screen x="0" y="25" width="1920" height="992" />
+    <state x="523" y="189" key="#Deployment" timestamp="1610806535669">
+      <screen x="0" y="25" width="1792" height="1030" />
     </state>
+    <state x="523" y="189" key="#Deployment/0.25.1792.1030@0.25.1792.1030" timestamp="1610806535669" />
     <state x="560" y="183" key="#Deployment/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609106130891" />
     <state x="544" y="170" key="#SSH_Configurations" timestamp="1609078017889">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="544" y="170" key="#SSH_Configurations/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078017889" />
+    <state x="100" y="125" width="1592" height="790" key="DiffContextDialog" timestamp="1610804998071">
+      <screen x="0" y="25" width="1792" height="1030" />
+    </state>
+    <state x="100" y="125" width="1592" height="790" key="DiffContextDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610804998071" />
     <state x="834" y="422" width="559" height="198" key="Github.ShareDialog" timestamp="1609078191596">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
@@ -99,21 +155,27 @@
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="753" y="230" key="Github.UntrackedFilesDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078205300" />
-    <state x="781" y="448" key="NewPhpFileDialog" timestamp="1609106272431">
-      <screen x="0" y="25" width="1920" height="992" />
+    <state x="729" y="464" key="NewPhpFileDialog" timestamp="1610806673864">
+      <screen x="0" y="25" width="1792" height="1030" />
     </state>
+    <state x="729" y="464" key="NewPhpFileDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610806673864" />
     <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609106272431" />
-    <state x="560" y="258" key="Vcs.Push.Dialog.v2" timestamp="1609107431217">
+    <state x="560" y="258" key="Vcs.Push.Dialog.v2" timestamp="1609274096918">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
-    <state x="560" y="258" key="Vcs.Push.Dialog.v2/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609107431217" />
-    <state x="867" y="255" width="727" height="531" key="ftp.server.browser" timestamp="1609106090271">
-      <screen x="0" y="25" width="1920" height="992" />
+    <state x="560" y="258" key="Vcs.Push.Dialog.v2/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609274096918" />
+    <state x="809" y="264" width="727" height="531" key="ftp.server.browser" timestamp="1610806527351">
+      <screen x="0" y="25" width="1792" height="1030" />
     </state>
+    <state x="809" y="264" key="ftp.server.browser/0.25.1792.1030@0.25.1792.1030" timestamp="1610806527351" />
     <state x="867" y="255" width="727" height="531" key="ftp.server.browser/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609106090271" />
     <state x="625" y="238" key="run.anything.popup" timestamp="1609175983922">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="625" y="238" key="run.anything.popup/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609175983922" />
+    <state x="713" y="391" key="webDeployment.PermissionsDialog" timestamp="1610806400709">
+      <screen x="0" y="25" width="1792" height="1030" />
+    </state>
+    <state x="713" y="391" key="webDeployment.PermissionsDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610806400709" />
   </component>
 </project>

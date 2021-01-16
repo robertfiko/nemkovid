@@ -2,7 +2,9 @@ function drawCalendar(cal) {
     let loading = document.querySelector("#loading");
     let calendar = document.querySelector("#calendar");
     let currentRow = document.createElement("tr");
-    currentRow.className = "calRow";
+    currentRow.classList.add("days");
+    currentRow.classList.add("calRow");
+
     let colCount = 0;
 
     let calRows = document.querySelectorAll(".calRow")
@@ -21,32 +23,47 @@ function drawCalendar(cal) {
         colCount++;
     }
 
-    if (colCount % 7 == 0) {
+    if (colCount % 7 === 0) {
+        currentRow.classList.remove("days");
         calendar.appendChild(currentRow);
         currentRow = document.createElement("tr");
-        currentRow.className = "calRow";
+        currentRow.classList.add("days");
+        currentRow.classList.add("calRow");
 
     }
 
     for(let day = 1; day <= cal.numberOfDays; day++) {
         let td = document.createElement("td");
+        td.classList.add("top");
 
         let num = document.createElement("p");
         num.innerText = day;
-
-        let btn = document.createElement("a");
-        btn.innerText = "Jelentkezés";
-        btn.href = "attend.php";
-        btn.classList.add("btn");
-        btn.classList.add("btn-outline-warning")
-
-        let p = document.createElement("p");
-        p.innerText = cal.days[day-1];
-
         td.appendChild(num);
 
-        td.appendChild(p);
-        td.appendChild(btn);
+        let counter = 0;
+        if ((cal.days[day-1] != null)) {
+            for (let appointment of cal.days[day-1]) {
+                let a = document.createElement("a");
+                a.innerText = ("0" + appointment.hour).slice(-2) + ":" + ("0" + appointment.minute).slice(-2) + " (" + appointment.current + "/" + appointment.limit + " fő)";
+                a.href="#";
+                if (parseInt(appointment.limit) === parseInt(appointment.current)) {
+                    a.classList.add("text-danger")
+                }
+                else {
+                    a.classList.add("text-success")
+                }
+
+                td.appendChild(a);
+                if (counter < cal.days[day-1].length ) {
+                    td.appendChild(document.createElement("br"));
+                }
+                counter++;
+            }
+        }
+
+
+
+
 
         if (parseInt(currentCalendar.year) === parseInt(serverDate.year) && parseInt(currentCalendar.month) === parseInt(serverDate.month) && day === parseInt(serverDate.day)) {
             td.classList.add("today");
@@ -57,7 +74,8 @@ function drawCalendar(cal) {
         if (colCount % 7 == 0) {
             calendar.appendChild(currentRow);
             currentRow = document.createElement("tr");
-            currentRow.className = "calRow";
+            currentRow.classList.add("days");
+            currentRow.classList.add("calRow");
 
         }
     }
@@ -161,6 +179,8 @@ nextBtn.addEventListener('click', () => {
     });
 
 })
+
+
 
 
 getServerDate().then(date => {

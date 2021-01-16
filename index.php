@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>Starter Template · Bootstrap v5.0</title>
+    <title>Nem KOVID</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
 
@@ -31,7 +31,14 @@
 
       table#calendar td, table#calendar tr {
           border: darkgrey solid 1px;
+      }
 
+      table#calendar tr.days {
+          height: 150px;
+      }
+
+      .top {
+          vertical-align: text-top;
       }
 
       td.today {
@@ -74,6 +81,9 @@
 </nav>
 
 <main class="container">
+
+    <h3>Regisztráció oltásra!</h3>
+    <p>Amennyiben be vagy jelentkezve, akkor az időpont rögtön foglalható, amennyiben nem, akkor az időpontra kattintás után a hitelesítési fülön, azonosítsd magad!</p>
 
   <div class="starter-template text-center py-5 px-3">
       <table class="" style="table-layout: fixed; width: 100%; margin-bottom: 1rem; vertical-align: top;">
