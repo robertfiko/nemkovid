@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/covid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/signin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calendarHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/calendarHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,8 +78,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -86,7 +92,7 @@
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
       <workItem from="1609274076198" duration="32000" />
-      <workItem from="1610799386819" duration="9941000" />
+      <workItem from="1610799386819" duration="11262000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -116,7 +122,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610809841155</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial log in commit">
+      <created>1610823770913</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610823770913</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Remove root logger">
+      <created>1610823800103</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610823800103</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,7 +159,9 @@
     <MESSAGE value="Save commit" />
     <MESSAGE value="Working appointment listing" />
     <MESSAGE value="Optimising" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimising" />
+    <MESSAGE value="Initial log in commit" />
+    <MESSAGE value="Remove root logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove root logger" />
   </component>
   <component name="WindowStateProjectService">
     <state x="523" y="189" key="#Deployment" timestamp="1610806535669">
@@ -186,9 +208,9 @@
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="625" y="238" key="run.anything.popup/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609175983922" />
-    <state x="713" y="391" key="webDeployment.PermissionsDialog" timestamp="1610806400709">
+    <state x="713" y="391" key="webDeployment.PermissionsDialog" timestamp="1610824411098">
       <screen x="0" y="25" width="1792" height="1030" />
     </state>
-    <state x="713" y="391" key="webDeployment.PermissionsDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610806400709" />
+    <state x="713" y="391" key="webDeployment.PermissionsDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610824411098" />
   </component>
 </project>
