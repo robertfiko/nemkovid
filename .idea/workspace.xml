@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/IFileIO.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/databaseConnection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/date.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/getRoot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendarHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/calendarHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +50,6 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -72,6 +63,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -94,7 +86,7 @@
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
       <workItem from="1609274076198" duration="32000" />
-      <workItem from="1610799386819" duration="9166000" />
+      <workItem from="1610799386819" duration="9941000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -110,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609274091690</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Working appointment listing">
+      <created>1610809718036</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610809718036</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Optimising">
+      <created>1610809841155</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610809841155</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +137,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Calendar" />
     <MESSAGE value="Save commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save commit" />
+    <MESSAGE value="Working appointment listing" />
+    <MESSAGE value="Optimising" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimising" />
   </component>
   <component name="WindowStateProjectService">
     <state x="523" y="189" key="#Deployment" timestamp="1610806535669">
@@ -143,6 +151,10 @@
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="544" y="170" key="#SSH_Configurations/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078017889" />
+    <state x="655" y="394" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1610809776179">
+      <screen x="0" y="25" width="1792" height="1030" />
+    </state>
+    <state x="655" y="394" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1792.1030@0.25.1792.1030" timestamp="1610809776179" />
     <state x="100" y="125" width="1592" height="790" key="DiffContextDialog" timestamp="1610804998071">
       <screen x="0" y="25" width="1792" height="1030" />
     </state>
@@ -160,9 +172,10 @@
     </state>
     <state x="729" y="464" key="NewPhpFileDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610806673864" />
     <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609106272431" />
-    <state x="560" y="258" key="Vcs.Push.Dialog.v2" timestamp="1609274096918">
-      <screen x="0" y="25" width="1920" height="992" />
+    <state x="523" y="267" key="Vcs.Push.Dialog.v2" timestamp="1610809844120">
+      <screen x="0" y="25" width="1792" height="1030" />
     </state>
+    <state x="523" y="267" key="Vcs.Push.Dialog.v2/0.25.1792.1030@0.25.1792.1030" timestamp="1610809844120" />
     <state x="560" y="258" key="Vcs.Push.Dialog.v2/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609274096918" />
     <state x="809" y="264" width="727" height="531" key="ftp.server.browser" timestamp="1610806527351">
       <screen x="0" y="25" width="1792" height="1030" />
