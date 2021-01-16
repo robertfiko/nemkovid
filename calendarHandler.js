@@ -71,7 +71,7 @@ function drawCalendar(cal) {
         currentRow.appendChild(td);
         colCount++;
 
-        if (colCount % 7 == 0) {
+        if (colCount % 7 === 0) {
             calendar.appendChild(currentRow);
             currentRow = document.createElement("tr");
             currentRow.classList.add("days");
@@ -118,7 +118,7 @@ function getServerDate() {
         .then(data => data)
 }
 function updateHeader() {
-    let magyarCsodasNeveAHonapnak = "";
+    let magyarCsodasNeveAHonapnak;
     switch(currentCalendar.month) {
         case 1: magyarCsodasNeveAHonapnak = "Január"; break;
         case 2: magyarCsodasNeveAHonapnak = "Február"; break;
