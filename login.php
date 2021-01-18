@@ -1,3 +1,39 @@
+<?php
+session_start();
+require("databaseConnection.php");
+$errors = [];
+if (isset($_POST) && isset($_POST["loginBtn"])) {
+    $query = new stdClass();
+    if (isset($_POST["inputEmail"])) {
+        $query->email = htmlspecialchars($_POST["inputEmail"]);
+    }
+    else {
+        $errors[] = "Az e-mail cím nem felismerhető!";
+    }
+
+    if (isset($_POST["inputPassword"])) {
+        $query->password = htmlspecialchars($_POST["inputPassword"]);
+    }
+    else {
+        $errors[] = "A jelszó nem felismerhető!";
+    }
+
+    if (count($errors) == 0) {
+        $user = checkUser($query);
+            if ($user["passed"]) {
+            //Sikeres belépés
+            $_SESSION["user"] = $user["userdata"];
+            header('Location: index.php');
+        }
+        else {
+            $errors = array_merge($errors, $user["errors"]);
+        }
+    }
+
+
+}
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -38,14 +74,25 @@
 </nav>
 
 <main class="form-signin">
-    <form>
+    <form action="login.php" method="post">
         <img class="mb-4" src="assets/covid.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 fw-normal">Kérlek jelentkezz be</h1>
+        <h1 class="h3 mb-3 fw-normal">Bejelentkezés</h1>
+        <?php
+        if (count($errors)) {
+            for ($i = 0; $i < count($errors); $i++) {
+                echo "<p class='text-danger'>".$errors[$i]."</p>";
+            }
+        }
+        ?>
+
         <label for="inputEmail" class="visually-hidden">Email cím</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email cím" required autofocus>
+        <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email cím" required autofocus>
+
         <label for="inputPassword" class="visually-hidden">Jelszó</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Jelszó" required>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Belépés</button>
+        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Jelszó" required>
+
+        <button class="w-100 btn btn-lg btn-primary" name="loginBtn" type="submit">Belépés</button>
+
         <p class="mt-5 mb-3 text-muted">Nemzeti Koronavírus Depó - 2021</p>
     </form>
 </main>

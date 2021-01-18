@@ -1,17 +1,11 @@
 {
-  "0": {
-    "id": 0,
-    "name": "Fikó Róbert",
-    "taj": 123123123,
-    "address": "Eger, Deméndi út",
-    "email": "fiko.robert@gmail.com",
-    "password": "kiscica",
-    "appointment":
-      {
-        "hour": 14,
-        "minute": 30,
-        "limit": 10,
-        "current": 5
-      }
-  }
+    "fiko.robert@gmail.com": {
+        "name": "Fik\u00f3 R\u00f3bert",
+        "taj": "123456789",
+        "address": "Eger, Dem\u00e9ndi \u00fat 12",
+        "email": "fiko.robert@gmail.com",
+        "password": "$2y$10$04Ve\/0ofrMVSwfYCf12gXunKr6lnNn8esoj2gDWvWz5PHq2qiaade",
+        "appointment": null
+    },
+    
 }

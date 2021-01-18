@@ -19,3 +19,35 @@ function isRegistered($userEmailID) {
     $json = new JsonStorage('users.json');
     return $json->findById($userEmailID) == NULL ? false : true;
 }
+
+function checkUser($user) {
+    $return = [
+        "passed" => false,
+        "errors" => [],
+        "userdata" => NULL
+    ];
+    $json = new JsonStorage('users.json');
+    if (isRegistered($user->email)) {
+        $userDb = $json->findById($user->email);
+
+        if ($userDb != NULL) {
+            if (password_verify($user->password, $userDb["password"])) {
+                $return["passed"] = true;
+                $return["userdata"] = $userDb;
+            }
+            else {
+                $return["errors"][] = "A megadott és a tárolt jelszó nem egyezik!";
+            }
+        }
+    }
+    else {
+        $return["errors"][] = "Az adott e-mail címmel nincsen regisztrált felhasználó!";
+    }
+
+    return $return;
+
+}
+
+function attendUser($user, $appointment) {
+
+}

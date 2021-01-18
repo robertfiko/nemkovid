@@ -5,9 +5,9 @@
     "month": 1,
     "day": 14,
     "appointments": [
-      {"hour":  14, "minute":  30, "limit":  10, "current": 5},
-      {"hour":  14, "minute":  45, "limit":  10, "current": 5},
-      {"hour":  15, "minute":  0, "limit":  10, "current": 3}
+      {"hour":  14, "minute":  30, "limit":  10, "current": 2, "attendees": ["fiko.robert@gmail.com","pista@kovidos.com"]},
+      {"hour":  14, "minute":  45, "limit":  10, "current": 2, "attendees": ["fiko.robert@gmail.com","pista@kovidos.com"]},
+      {"hour":  15, "minute":  0, "limit":  10, "current": 2, "attendees": ["fiko.robert@gmail.com","pista@kovidos.com"]}
     ]
   },
 
@@ -17,9 +17,20 @@
     "month": 1,
     "day": 28,
     "appointments": [
-      {"hour":  13, "minute":  0, "limit":  12, "current": 7},
-      {"hour":  14, "minute":  0, "limit":  12, "current": 12},
-      {"hour":  15, "minute":  0, "limit":  13, "current": 3}
+      {"hour":  13, "minute":  0, "limit":  12, "current": 3, "attendees": ["fiko.robert@gmail.com","pista@kovidos.com", "lajos@kovidos.com"]},
+      {"hour":  14, "minute":  0, "limit":  12, "current": 2, "attendees": ["fiko.robert@gmail.com","pista@kovidos.com"]},
+      {"hour":  15, "minute":  0, "limit":  13, "current": 2, "attendees": ["fiko.robert@gmail.com","pista@kovidos.com"]}
+    ]
+  },
+
+  "2": {
+    "id": 2,
+    "year": 2021,
+    "month": 2,
+    "day": 3,
+    "appointments": [
+      {"hour":  10, "minute":  0, "limit":  8, "current": 2, "attendees": ["fiko.robert@gmail.com","pista@kovidos.com"]},
+      {"hour":  14, "minute":  0, "limit":  8, "current": 1, "attendees": ["fiko.robert@gmail.com"]}
     ]
   }
 }

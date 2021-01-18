@@ -1,4 +1,5 @@
 <?php
+session_start();
 require("databaseConnection.php");
 
 if (isset($_POST)) {
@@ -121,10 +122,10 @@ if (isset($_POST)) {
         <input type="email" id="inputEmail" name="inputEmail" class="form-control" value="<?php if (isset($_POST["inputEmail"])) echo $_POST["inputEmail"];?>" placeholder="Email cím" required >
 
         <label for="inputPassword" class="visually-hidden">Jelszó</label>
-        <input type="password" id="inputPassword" name="inputPassword" class="form-control" value="<?php if (isset($_POST["inputPassword"])) echo $_POST["inputPassword"];?>" placeholder="Jelszó" required>
+        <input type="password" id="inputPassword" name="inputPassword" class="form-control"  placeholder="Jelszó" required>
 
         <label for="inputPasswordAgain" class="visually-hidden">Jelszó megismétlése</label>
-        <input type="password" id="inputPasswordAgain" name="inputPasswordAgain" class="form-control" value="<?php if (isset($_POST["inputPasswordAgain"])) echo $_POST["inputPasswordAgain"];?>" placeholder="Jelszó megismétlése" required>
+        <input type="password" id="inputPasswordAgain" name="inputPasswordAgain" class="form-control" placeholder="Jelszó megismétlése" required>
 
 
         <button class="w-100 btn btn-lg btn-primary" type="submit" name="register">Regisztrálás</button>
