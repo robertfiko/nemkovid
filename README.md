@@ -14,7 +14,7 @@ Minimálisan teljesítendő (6 pont)
 
 [ ] Listaoldal: megjelenik (0 pont)
 [ ] Listaoldal: statikus szöveg és tájékoztató (0 pont)
-[ ] Listaoldal: összes időpont listázása (1 pont)
+[X] Listaoldal: összes időpont listázása (1 pont)
 [ ] Admin: új időpont felvétele, hibakezelés (bejelentkezés és admin funkciók nélkül) (2 pont)
 [ ] Admin: új időpont felvétele, sikeres mentés (bejelentkezés és admin funkciók nélkül) (2 pont)
 
