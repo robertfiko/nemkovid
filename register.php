@@ -1,3 +1,54 @@
+<?php
+require("databaseConnection.php");
+
+if (isset($_POST)) {
+    $errors = [];
+    if (isset($_POST["register"])) {
+        $data = new stdClass();
+        if (isset($_POST["inputName"])) {
+            $data->name = htmlspecialchars($_POST["inputName"]);
+        }
+        else {
+            $errors[] = "A beírt név nem értelezhető!";
+        }
+
+        if (isset($_POST["inputTaj"]) && strlen(strval($_POST["inputTaj"])) == 9) {
+            $data->taj = htmlspecialchars($_POST["inputTaj"]);
+        }
+        else {
+            $errors[] = "A TAJ számnak 9 hosszúnak kell lennie!";
+        }
+
+        if (isset($_POST["inputAddress"])) {
+            $data->address = htmlspecialchars($_POST["inputAddress"]);
+        }
+        else {
+            $errors[] = "A beírt cím nem értelezhető!";
+        }
+
+        if (isset($_POST["inputEmail"])) {
+            $data->email = htmlspecialchars($_POST["inputEmail"]);
+        }
+        else {
+            $errors[] = "A beírt e-mail nem értelezhető!";
+        }
+
+        if (isset($_POST["inputPassword"]) && isset($_POST["inputPasswordAgain"]) && ($_POST["inputPasswordAgain"]) == ($_POST["inputPassword"])) {
+            $data->password = htmlspecialchars($_POST["inputPassword"]);
+        }
+        else {
+            $errors[] = "A jelszó és ellenőrzése nem megfelelő!";
+        }
+
+        if (count($errors) == 0) {
+            //Sikeres regisztráció
+            header('Location: login.php');
+        }
+    }
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -38,34 +89,42 @@
 </nav>
 
 <main class="form-signin">
-    <form>
+    <form method="POST" action="register.php">
         <img class="mb-4" src="assets/covid.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 fw-normal">Regisztráció</h1>
+        <?php
+            if (count($errors)) {
+                for ($i = 0; $i < count($errors); $i++) {
+                    echo "<p class='text-danger'>".$errors[$i]."</p>";
+                }
+            }
+        ?>
 
         <label for="inputName" class="visually-hidden">Teljes név</label>
-        <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Teljes név" required autofocus>
+        <input type="text" id="inputName" name="inputName" class="form-control" value="<?php if (isset($_POST["inputName"])) echo $_POST["inputName"];?>" placeholder="Teljes név" "required autofocus>
 
         <label for="inputTaj" class="visually-hidden">TAJ szám</label>
-        <input type="number" maxlength="9" minlength="9" id="inputTaj" name="inputTaj" class="form-control" placeholder="TAJ szám" required >
+        <input type="number" id="inputTaj" name="inputTaj" class="form-control"  value="<?php if (isset($_POST["inputTaj"])) echo $_POST["inputTaj"];?>" placeholder="TAJ szám" required >
 
         <label for="inputAddress" class="visually-hidden">Értesítési cím</label>
-        <input type="text" id="inputAddress" name="inputAddress" class="form-control" placeholder="Értesítési cím" required >
+        <input type="text" id="inputAddress" name="inputAddress" class="form-control" value="<?php if (isset($_POST["inputAddress"])) echo $_POST["inputAddress"];?>"  placeholder="Értesítési cím" required >
 
         <label for="inputEmail" class="visually-hidden">Email cím</label>
-        <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email cím" required >
+        <input type="email" id="inputEmail" name="inputEmail" class="form-control" value="<?php if (isset($_POST["inputEmail"])) echo $_POST["inputEmail"];?>" placeholder="Email cím" required >
 
         <label for="inputPassword" class="visually-hidden">Jelszó</label>
-        <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Jelszó" required>
+        <input type="password" id="inputPassword" name="inputPassword" class="form-control" value="<?php if (isset($_POST["inputPassword"])) echo $_POST["inputPassword"];?>" placeholder="Jelszó" required>
 
         <label for="inputPasswordAgain" class="visually-hidden">Jelszó megismétlése</label>
-        <input type="password" id="inputPasswordAgain" name="inputPasswordAgain" class="form-control" placeholder="Jelszó megismétlése" required>
+        <input type="password" id="inputPasswordAgain" name="inputPasswordAgain" class="form-control" value="<?php if (isset($_POST["inputPasswordAgain"])) echo $_POST["inputPasswordAgain"];?>" placeholder="Jelszó megismétlése" required>
 
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Regisztrálás</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" name="register">Regisztrálás</button>
         <p class="mt-5 mb-3 text-muted">Nemzeti Koronavírus Depó - 2021</p>
     </form>
 </main>
 
 
 </body>
+
 </html>

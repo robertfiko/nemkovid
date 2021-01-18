@@ -1,5 +1,4 @@
 Fikó Róbert
-
 G55OFZ
 Webprogramozás - számonkérés
 Ezt a megoldást a fent írt hallgató küldte be és készítette a Webprogramozás kurzus számonkéréséhez.
@@ -13,8 +12,7 @@ A fegyelmi vétség legsúlyosabb következménye a hallgató elbocsátása az e
 
 Minimálisan teljesítendő (6 pont)
 
-[X] Listaoldal: megjelenik (0 pont)
-
+[ ] Listaoldal: megjelenik (0 pont)
 [ ] Listaoldal: statikus szöveg és tájékoztató (0 pont)
 [ ] Listaoldal: összes időpont listázása (1 pont)
 [ ] Admin: új időpont felvétele, hibakezelés (bejelentkezés és admin funkciók nélkül) (2 pont)
@@ -22,7 +20,7 @@ Minimálisan teljesítendő (6 pont)
 
 Az alap feladatok (14 pont)
 
-[X] Listaoldal: Adott hónapba eső időpontok listázása (0,5 pont)
+[ ] Listaoldal: Adott hónapba eső időpontok listázása (0,5 pont)
 [ ] Listaoldal: Előző és következő hónap listázása (1 pont)
 [ ] Listaoldal: Szabad időpont zöld, a betelt piros (0,5 pont)
 [ ] Listaoldal: Jelentkezés gomb megjelenik az időpontok mellett vendégnek (0,5 pont)
