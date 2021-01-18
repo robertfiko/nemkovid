@@ -33,16 +33,24 @@ if (isset($_POST)) {
             $errors[] = "A beírt e-mail nem értelezhető!";
         }
 
-        if (isset($_POST["inputPassword"]) && isset($_POST["inputPasswordAgain"]) && ($_POST["inputPasswordAgain"]) == ($_POST["inputPassword"])) {
-            $data->password = htmlspecialchars($_POST["inputPassword"]);
+        if (isset($_POST["inputPassword"]) && isset($_POST["inputPasswordAgain"]) && (htmlspecialchars($_POST["inputPasswordAgain"])) == htmlspecialchars($_POST["inputPassword"])) {
+            $data->password = password_hash(htmlspecialchars($_POST["inputPassword"]), PASSWORD_DEFAULT);
         }
         else {
             $errors[] = "A jelszó és ellenőrzése nem megfelelő!";
         }
 
         if (count($errors) == 0) {
-            //Sikeres regisztráció
-            header('Location: login.php');
+            if (!isRegistered($data->email)) {
+                //Sikeres regisztráció
+                $data->appointment = NULL;
+                addNewUser($data, $data->email);
+                header('Location: login.php');
+            }
+            else {
+                $errors[] = "Ez az e-mail cím már regisztrálva van!";
+            }
+
         }
     }
 }

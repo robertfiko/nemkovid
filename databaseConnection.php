@@ -10,7 +10,12 @@ function getTimeForDay($year, $month, $day) {
     return (count($return) > 0) ? array_values($return)[0]["appointments"] : NULL;
 }
 
-function addNewUser($user) {
+function addNewUser($user, $customId = NULL) {
     $json = new JsonStorage('users.json');
-    return $json->add($user);
+    return $json->add($user, $customId);
+}
+
+function isRegistered($userEmailID) {
+    $json = new JsonStorage('users.json');
+    return $json->findById($userEmailID) == NULL ? false : true;
 }

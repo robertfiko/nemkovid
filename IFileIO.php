@@ -34,8 +34,8 @@ abstract class Storage implements IStorage, IFileIO {
         $this->save();
     }
 
-    public function add($record) {
-        $id = uniqid();
+    public function add($record, $customId = NULL) {
+        $id = $customId == NULL ? uniqid() : $customId;
         $this->contents[$id] = $record;
         return $id;
     }
