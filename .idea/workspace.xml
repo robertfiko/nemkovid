@@ -20,17 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/feltetelek.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createNewAppointment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/covid.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/covid.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attend.php" beforeDir="false" afterPath="$PROJECT_DIR$/attend.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databaseConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/databaseConnection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/date.json" beforeDir="false" afterPath="$PROJECT_DIR$/date.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
     </list>
@@ -99,7 +93,7 @@
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
       <workItem from="1609274076198" duration="32000" />
-      <workItem from="1610799386819" duration="30459000" />
+      <workItem from="1610799386819" duration="34626000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -192,7 +186,28 @@
       <option name="project" value="LOCAL" />
       <updated>1610956904153</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Attendance and PDF">
+      <created>1610998210211</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610998210211</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Login, register and attend">
+      <created>1610998235631</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610998235631</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Logout">
+      <created>1610998244056</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610998244056</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +238,10 @@
     <MESSAGE value="IDE commit" />
     <MESSAGE value="Registration" />
     <MESSAGE value="Finished registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished registration" />
+    <MESSAGE value="Attendance and PDF" />
+    <MESSAGE value="Login, register and attend" />
+    <MESSAGE value="Logout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logout" />
   </component>
   <component name="WindowStateProjectService">
     <state x="523" y="189" key="#Deployment" timestamp="1610806535669">
@@ -243,10 +261,11 @@
       <screen x="0" y="25" width="1792" height="1030" />
     </state>
     <state x="100" y="125" width="1592" height="790" key="DiffContextDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610804998071" />
-    <state x="100" y="108" width="1592" height="856" key="DirDiffDialog" timestamp="1610996451470">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog" timestamp="1611002297647">
+      <screen x="0" y="25" width="1792" height="1033" />
     </state>
-    <state x="100" y="108" width="1592" height="856" key="DirDiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1610996451470" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611001958376" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1033@0.25.1792.1033" timestamp="1611002297647" />
     <state x="100" y="125" width="1592" height="790" key="DirDiffDialog/0.25.1792.1034@0.25.1792.1034" timestamp="1610958641185" />
     <state x="834" y="422" width="559" height="198" key="Github.ShareDialog" timestamp="1609078191596">
       <screen x="0" y="25" width="1920" height="992" />
@@ -256,16 +275,20 @@
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="753" y="230" key="Github.UntrackedFilesDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078205300" />
-    <state x="729" y="477" key="NewPhpFileDialog" timestamp="1610990699332">
+    <state x="729" y="477" key="NewPhpFileDialog" timestamp="1610998135688">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="729" y="477" key="NewPhpFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1610990699332" />
+    <state x="729" y="477" key="NewPhpFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1610998135688" />
     <state x="729" y="464" key="NewPhpFileDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610824935973" />
     <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609106272431" />
     <state x="405" y="156" key="SettingsEditor" timestamp="1610987117859">
       <screen x="0" y="25" width="1792" height="1033" />
     </state>
     <state x="405" y="156" key="SettingsEditor/0.25.1792.1033@0.25.1792.1033" timestamp="1610987117859" />
+    <state width="254" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1610999940907">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.0.1792.1120@0.0.1792.1120" timestamp="1610999940907" />
     <state x="523" y="268" key="Vcs.Push.Dialog.v2" timestamp="1610955715157">
       <screen x="0" y="25" width="1792" height="1035" />
     </state>
@@ -282,9 +305,10 @@
     </state>
     <state x="583" y="247" key="run.anything.popup/0.25.1792.1033@0.25.1792.1033" timestamp="1610989051597" />
     <state x="625" y="238" key="run.anything.popup/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609175983922" />
-    <state x="561" y="243" width="670" height="676" key="search.everywhere.popup" timestamp="1610955659915">
-      <screen x="0" y="25" width="1792" height="1035" />
+    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup" timestamp="1610999941276">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1610999941276" />
     <state x="561" y="243" width="670" height="676" key="search.everywhere.popup/0.25.1792.1035@0.25.1792.1035" timestamp="1610955659915" />
     <state x="713" y="392" key="webDeployment.PermissionsDialog" timestamp="1610956131572">
       <screen x="0" y="25" width="1792" height="1034" />

@@ -10,7 +10,7 @@ if (isset($_POST)) {
             $data->name = htmlspecialchars($_POST["inputName"]);
         }
         else {
-            $errors[] = "A beírt név nem értelezhető!";
+            $errors[] = "A beírt név nem értelmezhető!";
         }
 
         if (isset($_POST["inputTaj"]) && strlen(strval($_POST["inputTaj"])) == 9) {
@@ -24,14 +24,14 @@ if (isset($_POST)) {
             $data->address = htmlspecialchars($_POST["inputAddress"]);
         }
         else {
-            $errors[] = "A beírt cím nem értelezhető!";
+            $errors[] = "A beírt cím nem értelmezhető!";
         }
 
         if (isset($_POST["inputEmail"])) {
             $data->email = htmlspecialchars($_POST["inputEmail"]);
         }
         else {
-            $errors[] = "A beírt e-mail nem értelezhető!";
+            $errors[] = "A beírt e-mail nem értelmezhető!";
         }
 
         if (isset($_POST["inputPassword"]) && isset($_POST["inputPasswordAgain"]) && (htmlspecialchars($_POST["inputPasswordAgain"])) == htmlspecialchars($_POST["inputPassword"])) {

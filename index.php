@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<!-- TODO múltbeéli időpontokra jelentkezés tiltása -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +101,10 @@
 <main class="container">
 
     <h3>Vezérlőpult</h3>
-    <a href="createNewAppointment.php" class="btn-success">Új időpont meghírdetése</a>
+    <?php if (isset($_SESSION["user"]) && $_SESSION["user"]["email"] == "admin@nemkovid.hu") {
+        echo '<a href="createNewAppointment.php" class="btn btn-success">Új időpont meghírdetése</a>';
+    }?>
+
 
 
     <div class="starter-template text-center py-5 px-3">

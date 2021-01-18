@@ -48,6 +48,44 @@ function checkUser($user) {
 
 }
 
+function recordNewAppointment($appointment) {
+    $json = new JsonStorage('date.json');
+    $year = $appointment->year;
+    $month = $appointment->month;
+    $day = $appointment->day;
+    $elements =  $json->query(function ($elem) use ($year, $month, $day) {
+        return ($elem['year'] == $year) && ($elem['month'] == $month) && ($elem['day'] == $day);
+    });
+
+    $app = new stdClass();
+    $app->hour = $appointment->hour;
+    $app->minute = $appointment->min;
+    $app->limit = $appointment->limit;
+    $app->current = 0;
+    $app->attendees = [];
+
+    if (count($elements) == 1) {
+        array_values($elements)[0]["appointments"][] = $app;
+        $json->save();
+    }
+    else if(count($elements) == 0) {
+        $info = new stdClass();
+        $info->id = $appointment->id;
+        $info->year = $appointment->year;
+        $info->month = $appointment->month;
+        $info->day = $appointment->day;
+        $info->appointments = [];
+        $info->appointments[] = $app;
+        $id = $json->add($info);
+        $json->findById($id)->id = $id;
+        echo "<script>alert('Új rekord létrehozva!')</script>";
+
+    }
+    else {
+        echo "Hiba!";
+    }
+}
+
 function attendUser($user, $appointment) {
 
 }
