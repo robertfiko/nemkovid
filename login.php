@@ -1,10 +1,18 @@
 <?php
 session_start();
-require("databaseConnection.php");
+require_once("databaseConnection.php");
+
 $errors = [];
-$url = "login.php?appid=".$_GET["appid"]."&day=".$_GET["day"];
+$errors[] = "Hiba";
+
+$url = "login.php";
+if (isset($_GET["appid"]) && isset($_GET["day"])) {
+    $url = "login.php?appid=".$_GET["appid"]."&day=".$_GET["day"];
+}
 
 if (isset($_POST) && isset($_POST["loginBtn"])) {
+    $errors = [];
+
     $query = new stdClass();
     if (isset($_POST["inputEmail"])) {
         $query->email = htmlspecialchars($_POST["inputEmail"]);

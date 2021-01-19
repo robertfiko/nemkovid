@@ -5,4 +5,3 @@ if (isset($_SESSION['user'])) {
     $_SESSION['user'] = cancelAppointment($_SESSION['user']);
 }
 header("Location: index.php");
-?>

@@ -1,12 +1,7 @@
 <?php
 session_start();
-//TODO: all require once evryehere+!!!
-//TODO: titles html
-//TODO jogosultésg ellenőrzése
 require_once ("databaseConnection.php");
 ?>
-<!-- TODO code formatting -->
-<!-- TODO comment to english-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,7 +97,6 @@ require_once ("databaseConnection.php");
 
     <div class="starter-template text-center py-5 px-3">
 
-        </table>
         <table class="" style="table-layout: fixed; width: 100%; margin-bottom: 1rem; vertical-align: top;">
             <tr>
                 <td>
@@ -129,6 +123,7 @@ require_once ("databaseConnection.php");
                 <td colspan="7">Betöltés alatt...</td>
             </tr>
 
+        </table>
     </div>
 
 

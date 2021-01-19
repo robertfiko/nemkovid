@@ -1,10 +1,13 @@
 <?php
 session_start();
-require("databaseConnection.php");
+require_once("databaseConnection.php");
+$errors = [];
+$errors[] = "Hiba";
 
 if (isset($_POST)) {
-    $errors = [];
     if (isset($_POST["register"])) {
+        $errors = [];
+
         $data = new stdClass();
         if (isset($_POST["inputName"])) {
             $data->name = htmlspecialchars($_POST["inputName"]);

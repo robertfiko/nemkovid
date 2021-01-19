@@ -1,10 +1,14 @@
 <?php
 session_start();
-require("databaseConnection.php");
+require_once("databaseConnection.php");
+$errors = [];
+$errors[] = "Hiba";
+
 if (isset($_POST)) {
-    $errors = [];
     if (isset($_POST["record"])) {
         $data = new stdClass();
+        $errors = [];
+
 
         //Dátum
         if (isset($_POST["date"])) {
@@ -124,7 +128,7 @@ if (isset($_POST)) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nem KOVID · Regisztráció</title>
+    <title>Nem KOVID · Időpont rögzítés</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 

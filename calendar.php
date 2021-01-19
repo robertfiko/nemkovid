@@ -29,7 +29,6 @@ function getCurrentMonth($currentMonth, $year, $useDbContent = false) {
     }
 
 
-
     $calendar->rows = $row_number;
     return $calendar;
 }
@@ -45,13 +44,11 @@ function getCurrentDate() {
 }
 
 
-
 if (isset($_GET)) {
     $response = json_decode(file_get_contents('php://input'), true);
     if (isset($_GET["function"]) && $_GET["function"] == "getCal") {
         echo json_encode(getCurrentMonth($response["month"], $response["year"]));
-    }
-    else if (isset($_GET["function"]) && $_GET["function"] == "current") {
+    } else if (isset($_GET["function"]) && $_GET["function"] == "current") {
         echo json_encode(getCurrentDate());
     }
 }
@@ -60,7 +57,7 @@ if (isset($_GET)) {
 if (isset($_GET["debug"])) {
     echo "<pre>";
     echo json_encode(getCurrentMonth(01, 2021), JSON_PRETTY_PRINT);
-    echo"</pre>";
+    echo "</pre>";
 }
 
 

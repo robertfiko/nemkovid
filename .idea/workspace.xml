@@ -19,20 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cancel.php" afterDir="false" />
+    <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="Attendance fixing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calendar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attend.php" beforeDir="false" afterPath="$PROJECT_DIR$/attend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendarHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/calendarHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cancel.php" beforeDir="false" afterPath="$PROJECT_DIR$/cancel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createNewAppointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/createNewAppointment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databaseConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/databaseConnection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/date.json" beforeDir="false" afterPath="$PROJECT_DIR$/date.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +95,7 @@
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
       <workItem from="1609274076198" duration="32000" />
-      <workItem from="1610799386819" duration="51488000" />
+      <workItem from="1610799386819" duration="52735000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -243,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611047821405</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="APpointment and user handling">
+      <created>1611068282317</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1611068282317</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +281,9 @@
     <MESSAGE value="Appointment adding" />
     <MESSAGE value="Separating calendar.css" />
     <MESSAGE value="Color coding days, also prevent to attend past events" />
-    <option name="LAST_COMMIT_MESSAGE" value="Color coding days, also prevent to attend past events" />
+    <MESSAGE value="APpointment and user handling" />
+    <MESSAGE value="Attendance fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attendance fixing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="523" y="189" key="#Deployment" timestamp="1610806535669">
@@ -296,9 +299,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="726" y="225" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611045291371" />
-    <state x="655" y="394" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1610809776179">
-      <screen x="0" y="25" width="1792" height="1030" />
+    <state x="655" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611069386371">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="655" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1611069386371" />
     <state x="655" y="394" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1792.1030@0.25.1792.1030" timestamp="1610809776179" />
     <state x="100" y="125" width="1592" height="790" key="DiffContextDialog" timestamp="1610804998071">
       <screen x="0" y="25" width="1792" height="1030" />

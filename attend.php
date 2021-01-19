@@ -1,22 +1,19 @@
 <?php
 session_start();
-require_once ("databaseConnection.php");
-
-//TODO: If user is not logged in redurect to index
-//TODO: Finish
-//TODO: check if user is already has an appointment
-//TODO prevent attending evetns in past
-//TODO: admin do not attend apps
-
+require_once("databaseConnection.php");
 
 if (!isset($_SESSION["user"])) {
-    $url = "attend.php?appid=".$_GET["appid"]."&day=".$_GET["day"];
-    header("Location: login.php?appid=".$_GET["appid"]."&day=".$_GET["day"]);
+    $url = "attend.php?appid=" . $_GET["appid"] . "&day=" . $_GET["day"];
+    header("Location: login.php?appid=" . $_GET["appid"] . "&day=" . $_GET["day"]);
 }
 
-$url = "attend.php?appid=".$_GET["appid"]."&day=".$_GET["day"];
-if (isset($_POST)) {
-    $errors = [];
+if (isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] != null) {
+    header("Location: index.php");
+}
+$errors = [];
+
+$url = "attend.php?appid=" . $_GET["appid"] . "&day=" . $_GET["day"];
+if (isset($_POST) && isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] == null) {
     if (isset($_POST["approve"])) {
         if (!isset($_POST["check"])) {
             $errors[] = "Kérlek jelöld be, hogy elfogadod a feltételeket!";
@@ -52,7 +49,8 @@ if (isset($_POST)) {
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php">NemKoViD</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -63,37 +61,38 @@ if (isset($_POST)) {
 </nav>
 
 <main class="form-signin">
-        <img class="mb-4" src="assets/covid.png" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 fw-normal">Jelentkezés 5G chipre</h1>
+    <img class="mb-4" src="assets/covid.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 fw-normal">Jelentkezés oltásra</h1>
+    <?php
+    if (count($errors)) {
+        for ($i = 0; $i < count($errors); $i++) {
+            echo "<p class='text-danger'>" . $errors[$i] . "</p>";
+        }
+    }
+    ?>
+
+    <form action="<?= $url ?>" method="post">
         <?php
-        if (count($errors)) {
-            for ($i = 0; $i < count($errors); $i++) {
-                echo "<p class='text-danger'>".$errors[$i]."</p>";
-            }
+        if (isset($_SESSION["user"])) {
+            echo "<p></p><b>Teljes név: </b>" . $_SESSION["user"]["name"] . "</p>";
+            echo "<p></p><b>Cím: </b>" . $_SESSION["user"]["address"] . "</p>";
+            echo "<p></p><b>TAJ: </b>" . $_SESSION["user"]["taj"] . "</p>";
+            echo "<p><b>Időpont: </b>";
+            $app = getAppointmentInfo($_GET["appid"], $_GET["day"]);
+            echo $app["year"] . '.' . sprintf("%02s", $app["month"]) . '.' . sprintf("%02s", $app["day"]) . ' ' . sprintf("%02s", $app["hour"]) . ':' . sprintf("%02s", $app["min"]) . '</p>';
+
         }
         ?>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check" name="check">
+            <label class="form-check-label" for="check">Elfogadom a <a href="feltetelek.pdf" target="_blank">jelentkezési
+                    feltételeket</a></label>
+        </div>
 
-        <form action="<?=$url?>" method="post">
-            <?php
-            if(isset($_SESSION["user"])) {
-                echo "<p></p><b>Teljes név: </b>".$_SESSION["user"]["name"]."</p>";
-                echo "<p></p><b>Cím: </b>".$_SESSION["user"]["address"]."</p>";
-                echo "<p></p><b>TAJ: </b>".$_SESSION["user"]["taj"]."</p>";
-                echo "<p><b>Időpont: </b>";
-                $app = getAppointmentInfo($_GET["appid"], $_GET["day"]);
-                echo $app["year"].'.'.sprintf("%02s", $app["month"]).'.'.sprintf("%02s", $app["day"]).' '.sprintf("%02s", $app["hour"]).':'.sprintf("%02s", $app["min"]).'</p>';
+        <button class="w-100 btn btn-lg btn-primary" type="submit" name="approve">Jelentkezés megerősítése</button>
+        <p class="mt-5 mb-3 text-muted">Nemzeti Koronavírus Depó - 2021</p>
 
-            }
-            ?>
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="check" name="check">
-                <label class="form-check-label" for="check">Elfogadom a <a href="feltetelek.pdf" target="_blank">jelentkezési feltételeket</a></label>
-            </div>
-
-            <button class="w-100 btn btn-lg btn-primary" type="submit" name="approve">Jelentkezés megerősítése</button>
-            <p class="mt-5 mb-3 text-muted">Nemzeti Koronavírus Depó - 2021</p>
-
-        </form>
+    </form>
 
 
 </main>
