@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="Finish commit" />
+    <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="Finish commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attend.php" beforeDir="false" afterPath="$PROJECT_DIR$/attend.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +90,7 @@
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
       <workItem from="1609274076198" duration="32000" />
-      <workItem from="1610799386819" duration="58088000" />
+      <workItem from="1610799386819" duration="58483000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -257,7 +260,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611081760740</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Finish commit">
+      <created>1611082344141</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1611082344141</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Finish commit">
+      <created>1611082363584</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611082363584</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +354,10 @@
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="753" y="230" key="Github.UntrackedFilesDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078205300" />
+    <state x="534" y="325" key="MultipleFileMergeDialog" timestamp="1611082390057">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="534" y="325" key="MultipleFileMergeDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611082390057" />
     <state x="658" y="290" key="NewPhpClassDialog" timestamp="1611062311567">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
@@ -352,18 +373,18 @@
     </state>
     <state x="405" y="142" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1611045494145" />
     <state x="405" y="156" key="SettingsEditor/0.25.1792.1033@0.25.1792.1033" timestamp="1610987117859" />
-    <state width="254" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1610999940907">
+    <state width="254" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1611082202988">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.0.1792.1120@0.0.1792.1120" timestamp="1610999940907" />
+    <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.0.1792.1120@0.0.1792.1120" timestamp="1611082202988" />
     <state width="500" height="445" key="SwitcherDM" timestamp="1611081522753">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="500" height="445" key="SwitcherDM/0.0.1792.1120@0.0.1792.1120" timestamp="1611081522753" />
-    <state x="523" y="263" key="Vcs.Push.Dialog.v2" timestamp="1611081763156">
+    <state x="523" y="263" key="Vcs.Push.Dialog.v2" timestamp="1611082396750">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="523" y="263" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1611081763156" />
+    <state x="523" y="263" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1611082396750" />
     <state x="523" y="267" key="Vcs.Push.Dialog.v2/0.25.1792.1030@0.25.1792.1030" timestamp="1610917430672" />
     <state x="523" y="268" key="Vcs.Push.Dialog.v2/0.25.1792.1035@0.25.1792.1035" timestamp="1610955715157" />
     <state x="560" y="258" key="Vcs.Push.Dialog.v2/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609274096918" />
@@ -381,10 +402,10 @@
     </state>
     <state x="583" y="247" key="run.anything.popup/0.25.1792.1033@0.25.1792.1033" timestamp="1610989051597" />
     <state x="625" y="238" key="run.anything.popup/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609175983922" />
-    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup" timestamp="1611049652239">
+    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup" timestamp="1611082226250">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1611049652239" />
+    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1611082226250" />
     <state x="561" y="243" width="670" height="676" key="search.everywhere.popup/0.25.1792.1035@0.25.1792.1035" timestamp="1610955659915" />
     <state x="713" y="392" key="webDeployment.PermissionsDialog" timestamp="1610956131572">
       <screen x="0" y="25" width="1792" height="1034" />

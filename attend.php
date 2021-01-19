@@ -7,7 +7,7 @@ if (!isset($_SESSION["user"])) {
     header("Location: login.php?appid=" . $_GET["appid"] . "&day=" . $_GET["day"]);
 }
 
-if (isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] != null) {
+if ((isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] != null) || (!isset($_GET["appid"])) || (!isset($_GET["day"]))) {
     header("Location: index.php");
 }
 
