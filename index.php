@@ -15,44 +15,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        table#calendar {
-            table-layout: fixed;
-            border: darkgrey solid 1px;
-        }
-
-        table#calendar td, table#calendar tr {
-            border: darkgrey solid 1px;
-        }
-
-        table#calendar tr.days {
-            height: 150px;
-        }
-
-        .top {
-            vertical-align: text-top;
-        }
-
-        td.today {
-            color: indianred;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
+    <link href="assets/calendar.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
