@@ -19,6 +19,7 @@ function drawCalendar(cal) {
     //Creating offset cells
     for(let i = 1; i <= cal.offset; i++)  {
         let td = document.createElement("td");
+        td.classList.add("past");
         currentRow.appendChild(td);
         colCount++;
     }
@@ -46,11 +47,16 @@ function drawCalendar(cal) {
                 let a = document.createElement("a");
                 a.innerText = ("0" + appointment.hour).slice(-2) + ":" + ("0" + appointment.minute).slice(-2) + " (" + appointment.current + "/" + appointment.limit + " fő)";
                 a.href="attend.php";
-                if (parseInt(appointment.limit) === parseInt(appointment.current)) {
-                    a.classList.add("text-danger")
+                if (parseInt(currentCalendar.year) <= parseInt(serverDate.year) && parseInt(currentCalendar.month) <= parseInt(serverDate.month) && day < parseInt(serverDate.day)) {
+                    a.classList.add("past");
                 }
                 else {
-                    a.classList.add("text-success")
+                    if (parseInt(appointment.limit) === parseInt(appointment.current)) {
+                        a.classList.add("text-danger")
+                    }
+                    else {
+                        a.classList.add("text-success")
+                    }
                 }
 
                 td.appendChild(a);
@@ -68,6 +74,11 @@ function drawCalendar(cal) {
         if (parseInt(currentCalendar.year) === parseInt(serverDate.year) && parseInt(currentCalendar.month) === parseInt(serverDate.month) && day === parseInt(serverDate.day)) {
             td.classList.add("today");
         }
+
+        if (parseInt(currentCalendar.year) <= parseInt(serverDate.year) && parseInt(currentCalendar.month) <= parseInt(serverDate.month) && day < parseInt(serverDate.day)) {
+            td.classList.add("past");
+        }
+
         currentRow.appendChild(td);
         colCount++;
 

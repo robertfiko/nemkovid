@@ -24,7 +24,16 @@ table#calendar tr.days {
 }
 
 td.today {
-    color: indianred;
+    background-color: #d2fff8;
+}
+
+td.past {
+    background-color: #d7d7d7;
+}
+
+a.past {
+    pointer-events:none;
+    color: gray!important;
 }
 
 @media (min-width: 768px) {
