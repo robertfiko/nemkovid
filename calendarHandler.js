@@ -1,3 +1,5 @@
+let disabled_str = "enabled";
+
 function drawCalendar(cal) {
     let loading = document.querySelector("#loading");
     let calendar = document.querySelector("#calendar");
@@ -46,18 +48,37 @@ function drawCalendar(cal) {
             for (let appointment of cal.days[day-1]) {
                 let a = document.createElement("a");
                 a.innerText = ("0" + appointment.hour).slice(-2) + ":" + ("0" + appointment.minute).slice(-2) + " (" + appointment.current + "/" + appointment.limit + " fő)";
-                a.href="attend.php";
+                a.href="attend.php?day=" + appointment.dayid + "&appid="+appointment.id;
+                a.classList.add("appointment");
+                a.classList.add(disabled_str.toString());
+                //For past years and months
+                if (parseInt(currentCalendar.year) < parseInt(serverDate.year) || parseInt(currentCalendar.month) < parseInt(serverDate.month)) {
+                    a.classList.add("past");
+                }
+
+                //For current month
                 if (parseInt(currentCalendar.year) <= parseInt(serverDate.year) && parseInt(currentCalendar.month) <= parseInt(serverDate.month) && day < parseInt(serverDate.day)) {
                     a.classList.add("past");
                 }
-                else {
-                    if (parseInt(appointment.limit) === parseInt(appointment.current)) {
-                        a.classList.add("text-danger")
+
+                if (parseInt(currentCalendar.year) === parseInt(serverDate.year) && parseInt(currentCalendar.month) === parseInt(serverDate.month) && day === parseInt(serverDate.day)) {
+                    if (parseInt(appointment.hour) < parseInt(serverDate.hour)) {
+                        a.classList.add("past");
                     }
-                    else {
-                        a.classList.add("text-success")
+                    if (parseInt(appointment.hour) === parseInt(serverDate.hour) && parseInt(appointment.minute) < parseInt(serverDate.min)) {
+                        a.classList.add("past");
                     }
                 }
+
+
+
+                if (parseInt(appointment.limit) === parseInt(appointment.current)) {
+                    a.classList.add("text-danger")
+                }
+                else {
+                    a.classList.add("text-success")
+                }
+
 
                 td.appendChild(a);
                 if (counter < cal.days[day-1].length ) {
@@ -75,6 +96,11 @@ function drawCalendar(cal) {
             td.classList.add("today");
         }
 
+        if (parseInt(currentCalendar.year) < parseInt(serverDate.year) || parseInt(currentCalendar.month) < parseInt(serverDate.month)) {
+            td.classList.add("past");
+        }
+
+        //For current month
         if (parseInt(currentCalendar.year) <= parseInt(serverDate.year) && parseInt(currentCalendar.month) <= parseInt(serverDate.month) && day < parseInt(serverDate.day)) {
             td.classList.add("past");
         }
@@ -147,6 +173,14 @@ function updateHeader() {
             magyarCsodasNeveAHonapnak = currentCalendar.month;
     }
     document.querySelector("#calHeader").innerHTML = currentCalendar.year + " " + magyarCsodasNeveAHonapnak;
+}
+function disableAllAppointments() {
+    disabled_str = "disabled";
+    let as = document.querySelectorAll(".appointment");
+    console.log(as);
+    for (let a of as) {
+        a.classList.add("disabled")
+    }
 }
 
 let currentCalendar;

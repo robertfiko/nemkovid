@@ -20,11 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cancel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/calendar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attend.php" beforeDir="false" afterPath="$PROJECT_DIR$/attend.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calendarHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/calendarHandler.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createNewAppointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/createNewAppointment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databaseConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/databaseConnection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/date.json" beforeDir="false" afterPath="$PROJECT_DIR$/date.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +46,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -61,6 +70,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -91,7 +101,7 @@
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
       <workItem from="1609274076198" duration="32000" />
-      <workItem from="1610799386819" duration="39526000" />
+      <workItem from="1610799386819" duration="51488000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -212,7 +222,28 @@
       <option name="project" value="LOCAL" />
       <updated>1611003853007</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Appointment adding">
+      <created>1611046967235</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1611046967235</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Separating calendar.css">
+      <created>1611047088502</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1611047088502</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Color coding days, also prevent to attend past events">
+      <created>1611047821405</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1611047821405</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +277,10 @@
     <MESSAGE value="Login, register and attend" />
     <MESSAGE value="Logout" />
     <MESSAGE value="Save commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save commit" />
+    <MESSAGE value="Appointment adding" />
+    <MESSAGE value="Separating calendar.css" />
+    <MESSAGE value="Color coding days, also prevent to attend past events" />
+    <option name="LAST_COMMIT_MESSAGE" value="Color coding days, also prevent to attend past events" />
   </component>
   <component name="WindowStateProjectService">
     <state x="523" y="189" key="#Deployment" timestamp="1610806535669">
@@ -270,12 +304,12 @@
       <screen x="0" y="25" width="1792" height="1030" />
     </state>
     <state x="100" y="125" width="1592" height="790" key="DiffContextDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610804998071" />
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog" timestamp="1611046800430">
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog" timestamp="1611064764868">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611046800430" />
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1033@0.25.1792.1033" timestamp="1611002297647" />
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1034@0.25.1792.1034" timestamp="1611046229091" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611064764868" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1033@0.25.1792.1033" timestamp="1611062666323" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1034@0.25.1792.1034" timestamp="1611053819216" />
     <state x="834" y="422" width="559" height="198" key="Github.ShareDialog" timestamp="1609078191596">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
@@ -284,10 +318,14 @@
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="753" y="230" key="Github.UntrackedFilesDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078205300" />
-    <state x="729" y="477" key="NewPhpFileDialog" timestamp="1610998135688">
+    <state x="658" y="290" key="NewPhpClassDialog" timestamp="1611062311567">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="729" y="477" key="NewPhpFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1610998135688" />
+    <state x="658" y="290" key="NewPhpClassDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611062311567" />
+    <state x="729" y="477" key="NewPhpFileDialog" timestamp="1611062320233">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="729" y="477" key="NewPhpFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611062320233" />
     <state x="729" y="464" key="NewPhpFileDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610824935973" />
     <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609106272431" />
     <state x="405" y="142" key="SettingsEditor" timestamp="1611045494145">
@@ -320,10 +358,10 @@
     </state>
     <state x="583" y="247" key="run.anything.popup/0.25.1792.1033@0.25.1792.1033" timestamp="1610989051597" />
     <state x="625" y="238" key="run.anything.popup/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609175983922" />
-    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup" timestamp="1610999941276">
+    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup" timestamp="1611049652239">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1610999941276" />
+    <state x="561" y="236" width="670" height="732" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1611049652239" />
     <state x="561" y="243" width="670" height="676" key="search.everywhere.popup/0.25.1792.1035@0.25.1792.1035" timestamp="1610955659915" />
     <state x="713" y="392" key="webDeployment.PermissionsDialog" timestamp="1610956131572">
       <screen x="0" y="25" width="1792" height="1034" />

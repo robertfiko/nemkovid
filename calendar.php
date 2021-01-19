@@ -39,6 +39,8 @@ function getCurrentDate() {
     $curr->year = date("Y");
     $curr->month = date("m");
     $curr->day = date("j");
+    $curr->hour = date("G");
+    $curr->min = date("i");
     return $curr;
 }
 

@@ -2,6 +2,8 @@
 session_start();
 require("databaseConnection.php");
 $errors = [];
+$url = "login.php?appid=".$_GET["appid"]."&day=".$_GET["day"];
+
 if (isset($_POST) && isset($_POST["loginBtn"])) {
     $query = new stdClass();
     if (isset($_POST["inputEmail"])) {
@@ -23,7 +25,11 @@ if (isset($_POST) && isset($_POST["loginBtn"])) {
             if ($user["passed"]) {
             //Sikeres belépés
             $_SESSION["user"] = $user["userdata"];
-            header('Location: index.php');
+            if (isset($_GET["day"]) && isset($_GET["appid"])) {
+                header("Location: attend.php?appid=".$_GET["appid"]."&day=".$_GET["day"]);
+            } else {
+                header('Location: index.php');
+            }
         }
         else {
             $errors = array_merge($errors, $user["errors"]);
@@ -74,7 +80,7 @@ if (isset($_POST) && isset($_POST["loginBtn"])) {
 </nav>
 
 <main class="form-signin">
-    <form action="login.php" method="post">
+    <form action="<?=$url?>" method="post">
         <img class="mb-4" src="assets/covid.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 fw-normal">Bejelentkezés</h1>
         <?php

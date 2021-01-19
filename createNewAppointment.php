@@ -1,10 +1,6 @@
 <?php
 session_start();
 require("databaseConnection.php");
-
-
-//TODO: Finish and check
-
 if (isset($_POST)) {
     $errors = [];
     if (isset($_POST["record"])) {
@@ -17,15 +13,27 @@ if (isset($_POST)) {
                 $year = intval($components[0]);
                 $month = intval($components[1]);
                 $day = intval($components[2]);
-                if ($year < intval(date("Y"))) {
-                    $errors[] = "Nem lehet időpontot a múltban rögzíteni (év)!";
-                    if ($month < intval(date("m"))) {
-                        $errors[] = "Nem lehet időpontot a múltban rögzíteni (hónap)!";
+
+                if ($year <= 0 || $month <= 0 || $day <= 0 ) {
+                    $errors[] = "Az dátum minden tagjának pozitívnak kell lennie!";
+                }
+                else {
+                    if ($year < intval(date("Y"))) {
+                        $errors[] = "Nem lehet időpontot a múltban rögzíteni (év)!";
+                    }
+                    else if ($year == intval(date("Y"))) {
                         if ($month < intval(date("m"))) {
-                            $errors[] = "Nem lehet időpontot a múltban rögzíteni (nap)!";
+                            $errors[] = "Nem lehet időpontot a múltban rögzíteni (hónap)!";
                         }
+                        else if ($month == intval(date("m"))) {
+                            if ($day < intval(date("d"))) {
+                                $errors[] = "Nem lehet időpontot a múltban rögzíteni (nap)!";
+                            }
+                        }
+
                     }
                 }
+
                 if (count($errors) == 0) {
                     $data->year = $year;
                     $data->month = $month;
@@ -46,20 +54,33 @@ if (isset($_POST)) {
             if (count($components) == 2) {
                 $hour = intval($components[0]);
                 $min = intval($components[1]);
+                if ($hour < 0 || $min < 0) {
+                    $errors[] = "Az időpont minden tagjának legalább nullának kell lennie!";
+                }
+                else {
+                    //Dátum validálása sikeres volt, tehát nem vagyunk a múltban.
+                    if (count($errors) == 0) {
 
-                //Dátum validálása sikeres volt, tehát nem vagyunk a múltban.
-                if (count($errors) == 0) {
-                    if ($hour < intval(date("G"))) {
-                        $errors[] = "Nem lehet időpontot a múltban rögzíteni (óra)!";
-                        if ($day < intval(date("i"))) {
-                            $errors[] = "Nem lehet időpontot a múltban rögzíteni (perc)!";
+                        //Today
+                        if ($data->year == date("Y") && $data->month == date("m") && $data->day == date("d")) {
+                            if ($hour < intval(date("G"))) {
+                                $errors[] = "Nem lehet időpontot a múltban rögzíteni (óra)!";
+                            }
+                            else {
+                                if ($min < intval(date("i"))) {
+                                    $errors[] = "Nem lehet időpontot a múltban rögzíteni (perc)!";
+                                }
+                            }
+                        }
+
+                        if (count($errors) == 0) {
+                            $data->hour = $hour;
+                            $data->min = $min;
                         }
                     }
-                    if (count($errors) == 0) {
-                        $data->hour = $hour;
-                        $data->min = $min;
-                    }
                 }
+
+
 
             }
             else {

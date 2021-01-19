@@ -1,5 +1,12 @@
-<?php session_start(); ?>
-<!-- TODO múltbeéli időpontokra jelentkezés tiltása -->
+<?php
+session_start();
+//TODO: all require once evryehere+!!!
+//TODO: titles html
+//TODO jogosultésg ellenőrzése
+require_once ("databaseConnection.php");
+?>
+<!-- TODO code formatting -->
+<!-- TODO comment to english-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,15 +39,19 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
+
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <?php if(!isset($_SESSION["user"])): ?>
                 <li class="nav-item active">
                     <a class="nav-link" href="register.php">Regisztráció</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.php">Bejelentkezés</a>
                 </li>
-
+                <?php endif ?>
             </ul>
+
+
             <?php
             if (isset($_SESSION["user"])) {
                 echo '    <ul class="navbar-nav ml-auto">
@@ -63,10 +74,29 @@
 
 <main class="container">
 
-    <h3>Vezérlőpult</h3>
-    <?php if (isset($_SESSION["user"]) && $_SESSION["user"]["email"] == "admin@nemkovid.hu") {
-        echo '<a href="createNewAppointment.php" class="btn btn-success">Új időpont meghírdetése</a>';
-    }?>
+
+    <?php
+
+    if (isset($_SESSION["user"]) && $_SESSION["user"]["email"] == "admin@nemkovid.hu") {
+            echo '<h3>Vezérlőpult</h3>';
+            echo '<a href="createNewAppointment.php" class="btn btn-success">Új időpont meghirdetése</a>';
+        }
+        else if ((!isset($_SESSION["user"])) || (isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] == NULL)) {
+            echo '<h3>Jelentkezés oltásra</h3>';
+            echo '<p>Időpont választásával jelentkezhetsz az adott oltónapra. Egy egyszerű hitelesítés (bejelentkezés vagy regisztráció) után, s egy rövid megerősítést követően az időpontot lefoglaljuk neked.</p>';
+        }
+        else if (isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] != NULL) {
+            echo '<h2>Foglalt időpont részletei</h2>';
+            $app = getAppointmentInfo($_SESSION["user"]["appointment"]["appid"], $_SESSION["user"]["appointment"]["dayid"]);
+            echo '<h3>'.$app["year"].'.'.sprintf("%02s", $app["month"]).'.'.sprintf("%02s", $app["day"]).' '.sprintf("%02s", $app["hour"]).':'.sprintf("%02s", $app["min"]).'</h3>';
+            echo '<a href="cancel.php" class="btn btn-danger">Időpont lemondása</a>';
+
+        }
+        else {
+            echo '<h3>Bezazonosítási hiba!</h3>';
+
+        }
+    ?>
 
 
 
@@ -109,6 +139,9 @@
 
 
 <script src="calendarHandler.js"></script>
+<?php if (isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] != NULL) {
+    echo "<script>disableAllAppointments();</script>";
+} ?>
 
 
 </html>

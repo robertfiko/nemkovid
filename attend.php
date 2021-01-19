@@ -1,12 +1,20 @@
 <?php
 session_start();
+require_once ("databaseConnection.php");
 
 //TODO: If user is not logged in redurect to index
 //TODO: Finish
+//TODO: check if user is already has an appointment
+//TODO prevent attending evetns in past
+//TODO: admin do not attend apps
 
 
-require("databaseConnection.php");
+if (!isset($_SESSION["user"])) {
+    $url = "attend.php?appid=".$_GET["appid"]."&day=".$_GET["day"];
+    header("Location: login.php?appid=".$_GET["appid"]."&day=".$_GET["day"]);
+}
 
+$url = "attend.php?appid=".$_GET["appid"]."&day=".$_GET["day"];
 if (isset($_POST)) {
     $errors = [];
     if (isset($_POST["approve"])) {
@@ -16,18 +24,20 @@ if (isset($_POST)) {
 
         if (count($errors) == 0) {
             //Időpont regisztrálás
+            attendUser($_SESSION["user"]["email"], $_GET["appid"], $_GET["day"]);
+            $_SESSION['user'] = updateUser($_SESSION["user"]["email"]);
+            header("Location: index.php");
         }
     }
 }
 
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nem KOVID · Regisztráció</title>
+    <title>Nem KOVID · Jelentkezés</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
 
@@ -48,15 +58,6 @@ if (isset($_POST)) {
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="register.php">Regisztráció</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.php">Bejelentkezés</a>
-                </li>
-            </ul>
-
         </div>
     </div>
 </nav>
@@ -72,17 +73,21 @@ if (isset($_POST)) {
         }
         ?>
 
-        <form action="attend.php" method="post">
+        <form action="<?=$url?>" method="post">
             <?php
             if(isset($_SESSION["user"])) {
                 echo "<p></p><b>Teljes név: </b>".$_SESSION["user"]["name"]."</p>";
                 echo "<p></p><b>Cím: </b>".$_SESSION["user"]["address"]."</p>";
                 echo "<p></p><b>TAJ: </b>".$_SESSION["user"]["taj"]."</p>";
+                echo "<p><b>Időpont: </b>";
+                $app = getAppointmentInfo($_GET["appid"], $_GET["day"]);
+                echo $app["year"].'.'.sprintf("%02s", $app["month"]).'.'.sprintf("%02s", $app["day"]).' '.sprintf("%02s", $app["hour"]).':'.sprintf("%02s", $app["min"]).'</p>';
+
             }
             ?>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Elfogadom a <a href="feltetelek.pdf" target="_blank">jelentkezési feltételeket</a></label>
+                <input type="checkbox" class="form-check-input" id="check" name="check">
+                <label class="form-check-label" for="check">Elfogadom a <a href="feltetelek.pdf" target="_blank">jelentkezési feltételeket</a></label>
             </div>
 
             <button class="w-100 btn btn-lg btn-primary" type="submit" name="approve">Jelentkezés megerősítése</button>

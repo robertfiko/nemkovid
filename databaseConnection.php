@@ -60,6 +60,17 @@ function checkUser($user) {
 
 }
 
+function updateUser($userID) {
+    $json = new JsonStorage('users.json');
+    $userDb = null;
+    if (isRegistered($userID)) {
+        $userDb = $json->findById($userID);
+    }
+
+    return $userDb;
+
+}
+
 function recordNewAppointment($appointment) {
     //Searching the corresponding date, if the day of the appointment has been set already
     $json = new JsonStorage('date.json');
@@ -117,6 +128,91 @@ function recordNewAppointment($appointment) {
 
 }
 
-function attendUser($user, $appointment) {
+function attendUser($userid, $appid, $dayid) {
+    $response = [
+        "succes" => true,
+        "errors" => []
+    ];
+    $dates = new JsonStorage('date.json');
+    $users = new JsonStorage('users.json');
+
+    $day = $dates->findById($dayid);
+    if ($day != NULL && isset($day["appointments"])) {
+        $user = $users->findById($userid);
+        if ($user != NULL) {
+            $day["appointments"][$appid]["attendees"][] = $userid;
+            $dates->update($dayid,$day);
+            $dates->save();
+
+            $user["appointment"] = ["dayid" => $dayid, "appid" => $appid];
+            $users->update($userid,$user);
+            $users->save();
+        }
+        else {
+            $response["errors"][] = "Felhasználó azonosító helytelen!";
+            $response["succes"] = false;
+        }
+
+
+    }
+    else {
+        $response["errors"][] = "Nap vagy időpont azonosító helytelen!";
+        $response["succes"] = false;
+    }
 
 }
+
+function getAppointmentInfo($appid, $dayid) {
+    $response = [
+        "succes" => true,
+        "errors" => [],
+        "day" => null,
+        "month" => null,
+        "year" => null,
+        "min" => null,
+        "hour" => null
+    ];
+    $dates = new JsonStorage('date.json');
+
+    $day = $dates->findById($dayid);
+    if ($day != NULL && isset($day["appointments"])) {
+        $response["year"] = $day["year"];
+        $response["month"] = $day["month"];
+        $response["day"] = $day["day"];
+
+        $response["min"] = $day["appointments"][$appid]["minute"];
+        $response["hour"] = $day["appointments"][$appid]["hour"];
+    }
+
+    else {
+        $response["errors"][] = "Nap vagy időpont azonosító helytelen!";
+        $response["succes"] = false;
+    }
+
+    return $response;
+
+}
+
+function cancelAppointment($user) {
+    $dayid = $user["appointment"]["dayid"];
+    $appid = $user["appointment"]["appid"];
+    $userid = $user["email"];
+
+    $dates = new JsonStorage('date.json');
+    $date = $dates->findById($dayid);
+    $users = new JsonStorage('users.json');
+    $userDb = $users->findById($userid);
+
+    $i = array_search($userid, $date["appointments"][$appid]["attendees"]);
+    unset($date["appointments"][$appid]["attendees"][$i]);
+    $dates->update($dayid,$date);
+    $dates->save();
+
+    $userDb["appointment"] = null;
+    $users->update($userid,$userDb);
+    $users->save();
+    return updateUser($userid);
+}
+
+
+
