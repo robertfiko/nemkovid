@@ -20,13 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/createNewAppointment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/calendar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createNewAppointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/createNewAppointment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/databaseConnection.php" beforeDir="false" afterPath="$PROJECT_DIR$/databaseConnection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/date.json" beforeDir="false" afterPath="$PROJECT_DIR$/date.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/users.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -93,7 +91,7 @@
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
       <workItem from="1609274076198" duration="32000" />
-      <workItem from="1610799386819" duration="34626000" />
+      <workItem from="1610799386819" duration="39526000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -207,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610998244056</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Save commit">
+      <created>1611003853007</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611003853007</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +232,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Calendar" />
-    <MESSAGE value="Save commit" />
     <MESSAGE value="Working appointment listing" />
     <MESSAGE value="Optimising" />
     <MESSAGE value="Initial log in commit" />
@@ -241,7 +245,8 @@
     <MESSAGE value="Attendance and PDF" />
     <MESSAGE value="Login, register and attend" />
     <MESSAGE value="Logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logout" />
+    <MESSAGE value="Save commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="523" y="189" key="#Deployment" timestamp="1610806535669">
@@ -253,6 +258,10 @@
       <screen x="0" y="25" width="1920" height="992" />
     </state>
     <state x="544" y="170" key="#SSH_Configurations/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609078017889" />
+    <state x="726" y="225" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog" timestamp="1611045291371">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="726" y="225" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611045291371" />
     <state x="655" y="394" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1610809776179">
       <screen x="0" y="25" width="1792" height="1030" />
     </state>
@@ -261,12 +270,12 @@
       <screen x="0" y="25" width="1792" height="1030" />
     </state>
     <state x="100" y="125" width="1592" height="790" key="DiffContextDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610804998071" />
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog" timestamp="1611002297647">
-      <screen x="0" y="25" width="1792" height="1033" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog" timestamp="1611046800430">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611001958376" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611046800430" />
     <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1033@0.25.1792.1033" timestamp="1611002297647" />
-    <state x="100" y="125" width="1592" height="790" key="DirDiffDialog/0.25.1792.1034@0.25.1792.1034" timestamp="1610958641185" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1034@0.25.1792.1034" timestamp="1611046229091" />
     <state x="834" y="422" width="559" height="198" key="Github.ShareDialog" timestamp="1609078191596">
       <screen x="0" y="25" width="1920" height="992" />
     </state>
@@ -281,20 +290,26 @@
     <state x="729" y="477" key="NewPhpFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1610998135688" />
     <state x="729" y="464" key="NewPhpFileDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610824935973" />
     <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609106272431" />
-    <state x="405" y="156" key="SettingsEditor" timestamp="1610987117859">
-      <screen x="0" y="25" width="1792" height="1033" />
+    <state x="405" y="142" key="SettingsEditor" timestamp="1611045494145">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="405" y="142" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1611045494145" />
     <state x="405" y="156" key="SettingsEditor/0.25.1792.1033@0.25.1792.1033" timestamp="1610987117859" />
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup" timestamp="1610999940907">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.0.1792.1120@0.0.1792.1120" timestamp="1610999940907" />
-    <state x="523" y="268" key="Vcs.Push.Dialog.v2" timestamp="1610955715157">
-      <screen x="0" y="25" width="1792" height="1035" />
+    <state x="523" y="263" key="Vcs.Push.Dialog.v2" timestamp="1611003854724">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
+    <state x="523" y="263" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1611003854724" />
     <state x="523" y="267" key="Vcs.Push.Dialog.v2/0.25.1792.1030@0.25.1792.1030" timestamp="1610917430672" />
     <state x="523" y="268" key="Vcs.Push.Dialog.v2/0.25.1792.1035@0.25.1792.1035" timestamp="1610955715157" />
     <state x="560" y="258" key="Vcs.Push.Dialog.v2/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609274096918" />
+    <state x="784" y="450" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog" timestamp="1611045491841">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="784" y="450" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611045491841" />
     <state x="809" y="264" width="727" height="531" key="ftp.server.browser" timestamp="1610806527351">
       <screen x="0" y="25" width="1792" height="1030" />
     </state>

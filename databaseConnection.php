@@ -1,13 +1,25 @@
 <?php
 require_once("IFileIO.php");
-
 function getTimeForDay($year, $month, $day) {
     $json = new JsonStorage('date.json');
     $return =  $json->query(function ($elem) use ($year, $month, $day) {
         return ($elem['year'] == $year) && ($elem['month'] == $month) && ($elem['day'] == $day);
     });
 
-    return (count($return) > 0) ? array_values($return)[0]["appointments"] : NULL;
+    if ((count($return) > 0)) {
+        $appointments = array_values($return)[0]["appointments"];
+        $returnapps = [];
+        foreach ($appointments as &$value) {
+            $value["current"] = count($value["attendees"]);
+            $returnapps[] = $value;
+        }
+        unset($value);
+
+        return $returnapps;
+    }
+    else {
+        return NULL;
+    }
 }
 
 function addNewUser($user, $customId = NULL) {
@@ -49,6 +61,7 @@ function checkUser($user) {
 }
 
 function recordNewAppointment($appointment) {
+    //Searching the corresponding date, if the day of the appointment has been set already
     $json = new JsonStorage('date.json');
     $year = $appointment->year;
     $month = $appointment->month;
@@ -57,33 +70,51 @@ function recordNewAppointment($appointment) {
         return ($elem['year'] == $year) && ($elem['month'] == $month) && ($elem['day'] == $day);
     });
 
+    //If more then one day was found
+    if (count($elements) > 1) {
+        echo "Hiba!";
+        return;
+    }
+    //Creating appointment data
     $app = new stdClass();
     $app->hour = $appointment->hour;
     $app->minute = $appointment->min;
     $app->limit = $appointment->limit;
-    $app->current = 0;
     $app->attendees = [];
+    $app->id = uniqid();
+    $app->dayid = "no_id";
 
+    //If the day has already has been set
     if (count($elements) == 1) {
-        array_values($elements)[0]["appointments"][] = $app;
+        $newRecord = array_values($elements)[0];
+
+        //Adding new appointment to that day
+        $app->dayid = $newRecord["id"];
+        $newRecord["appointments"][$app->id] = $app;
+        $json->update($newRecord["id"],$newRecord);
         $json->save();
     }
+
+    //If the day has not been created
     else if(count($elements) == 0) {
+        //Creating day structure
         $info = new stdClass();
-        $info->id = $appointment->id;
+        $info->id = "no_id";
         $info->year = $appointment->year;
         $info->month = $appointment->month;
         $info->day = $appointment->day;
         $info->appointments = [];
-        $info->appointments[] = $app;
+
+        //Adding appointment
+        $info->appointments[$app->id] = $app;
         $id = $json->add($info);
+
+        //Cross referencing
+        $info->appointments[$app->id]->dayid = $id;
         $json->findById($id)->id = $id;
-        echo "<script>alert('Új rekord létrehozva!')</script>";
 
     }
-    else {
-        echo "Hiba!";
-    }
+
 }
 
 function attendUser($user, $appointment) {

@@ -9,7 +9,6 @@ if (isset($_POST)) {
     $errors = [];
     if (isset($_POST["record"])) {
         $data = new stdClass();
-        $data->id = "no_id"; //TODO check if needed
 
         //Dátum
         if (isset($_POST["date"])) {
@@ -92,6 +91,7 @@ if (isset($_POST)) {
         if (count($errors) == 0) {
             //Sikeres validálás
             recordNewAppointment($data);
+            header("Location: index.php");
         }
     }
 }
@@ -156,14 +156,14 @@ if (isset($_POST)) {
         </div>
 
         <div class="form-group">
-            <label for="time" class="visually-hidden">Dátum</label>
+            <label for="time" class="visually-hidden">Időpont</label>
             <input type="text" class="form-control" id="time" name="time" placeholder="Időpont" value="<?php if (isset($_POST["time"])) echo $_POST["time"];?>" required>
             <small id="timeHelp" class="form-text text-muted">ÓÓ:PP formátumban</small>
         </div>
 
         <div class="form-group">
             <label for="places" class="visually-hidden">Helyek száma</label>
-            <input type="number" class="form-control" id="places" name="places" placeholder="Időpont" value="<?php if (isset($_POST["places"])) echo $_POST["places"];?>" required>
+            <input type="number" class="form-control" id="places" name="places" placeholder="Helyek száma" value="<?php if (isset($_POST["places"])) echo $_POST["places"];?>" required>
             <small id="timeHelp" class="form-text text-muted">Meghírdetni kívánt helyek száma</small>
         </div>
 

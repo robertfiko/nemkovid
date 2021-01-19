@@ -24,8 +24,12 @@ function getCurrentMonth($currentMonth, $year, $useDbContent = false) {
         if (($dayi + $offset - 1) % 7 == 0 && $dayi != 1) {
             $row_number++;
         }
+
         $calendar->days[] = $appointments;
     }
+
+
+
     $calendar->rows = $row_number;
     return $calendar;
 }
@@ -50,12 +54,12 @@ if (isset($_GET)) {
     }
 }
 
-/*
+
 if (isset($_GET["debug"])) {
     echo "<pre>";
     echo json_encode(getCurrentMonth(01, 2021), JSON_PRETTY_PRINT);
     echo"</pre>";
-}*/
+}
 
 
 
