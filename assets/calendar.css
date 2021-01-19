@@ -32,13 +32,21 @@ td.past {
 }
 
 a.past {
-
+    pointer-events:none;
     color: gray!important;
 }
 
 a.disabled {
     pointer-events:none;
     color: #d7d7d7!important;
+}
+
+a.full {
+    pointer-events:none;
+}
+
+a.admin {
+    pointer-events: auto!important;
 }
 
 @media (min-width: 768px) {

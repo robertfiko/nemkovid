@@ -71,6 +71,10 @@ function updateUser($userID) {
 
 }
 
+function getUser($userId) {
+    return updateUser($userId);
+}
+
 function recordNewAppointment($appointment) {
     //Searching the corresponding date, if the day of the appointment has been set already
     $json = new JsonStorage('date.json');
@@ -170,7 +174,8 @@ function getAppointmentInfo($appid, $dayid) {
         "month" => null,
         "year" => null,
         "min" => null,
-        "hour" => null
+        "hour" => null,
+        "appoi" => null
     ];
     $dates = new JsonStorage('date.json');
 
@@ -180,6 +185,7 @@ function getAppointmentInfo($appid, $dayid) {
         $response["month"] = $day["month"];
         $response["day"] = $day["day"];
 
+        $response["appoi"] = $day["appointments"][$appid];
         $response["min"] = $day["appointments"][$appid]["minute"];
         $response["hour"] = $day["appointments"][$appid]["hour"];
     }
@@ -192,6 +198,8 @@ function getAppointmentInfo($appid, $dayid) {
     return $response;
 
 }
+
+
 
 function cancelAppointment($user) {
     $dayid = $user["appointment"]["dayid"];

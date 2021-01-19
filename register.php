@@ -2,7 +2,6 @@
 session_start();
 require_once("databaseConnection.php");
 $errors = [];
-$errors[] = "Hiba";
 
 if (isset($_POST)) {
     if (isset($_POST["register"])) {

@@ -134,9 +134,16 @@ require_once ("databaseConnection.php");
 
 
 <script src="calendarHandler.js"></script>
-<?php if (isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] != NULL) {
-    echo "<script>disableAllAppointments();</script>";
-} ?>
+<?php
+    if (isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] != NULL) {
+        echo "<script>disableAllAppointments();</script>";
+    }
+
+    if (isset($_SESSION["user"]) && $_SESSION["user"]["email"] == "admin@nemkovid.hu") {
+        echo "<script>enableGodMode();</script>";
+    }
+
+?>
 
 
 </html>

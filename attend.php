@@ -10,6 +10,12 @@ if (!isset($_SESSION["user"])) {
 if (isset($_SESSION["user"]) && $_SESSION["user"]["appointment"] != null) {
     header("Location: index.php");
 }
+
+if (isset($_SESSION["user"]) && $_SESSION["user"]["email"] == "admin@nemkovid.hu") {
+    header("Location: appinfo.php?appid=" . $_GET["appid"] . "&day=" . $_GET["day"]);
+}
+
+
 $errors = [];
 
 $url = "attend.php?appid=" . $_GET["appid"] . "&day=" . $_GET["day"];
@@ -74,9 +80,9 @@ if (isset($_POST) && isset($_SESSION["user"]) && $_SESSION["user"]["appointment"
     <form action="<?= $url ?>" method="post">
         <?php
         if (isset($_SESSION["user"])) {
-            echo "<p></p><b>Teljes név: </b>" . $_SESSION["user"]["name"] . "</p>";
-            echo "<p></p><b>Cím: </b>" . $_SESSION["user"]["address"] . "</p>";
-            echo "<p></p><b>TAJ: </b>" . $_SESSION["user"]["taj"] . "</p>";
+            echo "<p><b>Teljes név: </b>" . $_SESSION["user"]["name"] . "</p>";
+            echo "<p><b>Cím: </b>" . $_SESSION["user"]["address"] . "</p>";
+            echo "<p><b>TAJ: </b>" . $_SESSION["user"]["taj"] . "</p>";
             echo "<p><b>Időpont: </b>";
             $app = getAppointmentInfo($_GET["appid"], $_GET["day"]);
             echo $app["year"] . '.' . sprintf("%02s", $app["month"]) . '.' . sprintf("%02s", $app["day"]) . ' ' . sprintf("%02s", $app["hour"]) . ':' . sprintf("%02s", $app["min"]) . '</p>';

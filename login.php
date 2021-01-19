@@ -3,7 +3,6 @@ session_start();
 require_once("databaseConnection.php");
 
 $errors = [];
-$errors[] = "Hiba";
 
 $url = "login.php";
 if (isset($_GET["appid"]) && isset($_GET["day"])) {
