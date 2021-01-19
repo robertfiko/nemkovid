@@ -112,7 +112,7 @@ if (isset($_POST)) {
         ?>
 
         <label for="inputName" class="visually-hidden">Teljes név</label>
-        <input type="text" id="inputName" name="inputName" class="form-control" value="<?php if (isset($_POST["inputName"])) echo $_POST["inputName"];?>" placeholder="Teljes név" "required autofocus>
+        <input type="text" id="inputName" name="inputName" class="form-control" value="<?php if (isset($_POST["inputName"])) echo $_POST["inputName"];?>" placeholder="Teljes név" required autofocus>
 
         <label for="inputTaj" class="visually-hidden">TAJ szám</label>
         <input type="number" id="inputTaj" name="inputTaj" class="form-control"  value="<?php if (isset($_POST["inputTaj"])) echo $_POST["inputTaj"];?>" placeholder="TAJ szám" required >
