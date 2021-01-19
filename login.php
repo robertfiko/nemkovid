@@ -3,7 +3,6 @@ session_start();
 require_once("databaseConnection.php");
 
 $errors = [];
-$errors[] = "Hiba";
 
 $url = "login.php";
 if (isset($_GET["appid"]) && isset($_GET["day"])) {
@@ -88,7 +87,7 @@ if (isset($_POST) && isset($_POST["loginBtn"])) {
 </nav>
 
 <main class="form-signin">
-    <form action="<?=$url?>" method="post">
+    <form action="<?=$url?>" method="post" novalidate>
         <img class="mb-4" src="assets/covid.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 fw-normal">Bejelentkezés</h1>
         <?php

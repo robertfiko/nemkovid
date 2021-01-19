@@ -1,4 +1,5 @@
 let disabled_str = "enabled";
+let god_str = "no_god";
 
 function drawCalendar(cal) {
     let loading = document.querySelector("#loading");
@@ -74,10 +75,12 @@ function drawCalendar(cal) {
 
                 if (parseInt(appointment.limit) === parseInt(appointment.current)) {
                     a.classList.add("text-danger")
+                    a.classList.add("full")
                 }
                 else {
                     a.classList.add("text-success")
                 }
+                a.classList.add(god_str);
 
 
                 td.appendChild(a);
@@ -180,6 +183,15 @@ function disableAllAppointments() {
     console.log(as);
     for (let a of as) {
         a.classList.add("disabled")
+    }
+}
+
+function enableGodMode() {
+    god_str = "admin";
+    let as = document.querySelectorAll(".appointment");
+    console.log(as);
+    for (let a of as) {
+        a.classList.add("admin")
     }
 }
 

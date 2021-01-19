@@ -2,7 +2,6 @@
 session_start();
 require_once("databaseConnection.php");
 $errors = [];
-$errors[] = "Hiba";
 
 if (isset($_POST)) {
     if (isset($_POST["register"])) {
@@ -101,7 +100,7 @@ if (isset($_POST)) {
 </nav>
 
 <main class="form-signin">
-    <form method="POST" action="register.php">
+    <form method="POST" action="register.php" novalidate>
         <img class="mb-4" src="assets/covid.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 fw-normal">Regisztráció</h1>
         <?php

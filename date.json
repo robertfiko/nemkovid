@@ -9,7 +9,9 @@
                 "hour": 10,
                 "minute": 0,
                 "limit": 15,
-                "attendees": [],
+                "attendees": [
+                    "viki.orban@kovidos.hu"
+                ],
                 "id": "6006a728e39ca",
                 "dayid": "6006a728e3a38"
             },
@@ -35,14 +37,6 @@
                 "limit": 10,
                 "attendees": [],
                 "id": "6006a7d208585",
-                "dayid": "6006a7d2085e5"
-            },
-            "6006a7dfbeb07": {
-                "hour": 14,
-                "minute": 0,
-                "limit": 8,
-                "attendees": [],
-                "id": "6006a7dfbeb07",
                 "dayid": "6006a7d2085e5"
             }
         }
@@ -113,7 +107,13 @@
                 "hour": 10,
                 "minute": 0,
                 "limit": 5,
-                "attendees": [],
+                "attendees": [
+                    "bela@kovidos.hu",
+                    "pista@kovidos.hu",
+                    "geza@kovidos.hu",
+                    "arpad@kovidos.hu",
+                    "andras@kovidos.hu"
+                ],
                 "id": "6006a81218bac",
                 "dayid": "6006a81218c38"
             }

@@ -14,5 +14,71 @@
         "email": "fiko.robert@gmail.com",
         "password": "$2y$10$Q6sQyYjughq3iMjoJLeaEe9nbMducJ5GRhFSYF77J9SsaE92BqKxm",
         "appointment": null
+    },
+    "bela@kovidos.hu": {
+        "name": "Kovidos B\u00e9la",
+        "taj": "000111222",
+        "address": "Corona al Village",
+        "email": "bela@kovidos.hu",
+        "password": "$2y$10$Lkr93OZUnyegWbkcWKz3eerTi8S9tjxYjbTLUb59wxUKpv6SD.pK6",
+        "appointment": {
+            "dayid": "6006a81218c38",
+            "appid": "6006a81218bac"
+        }
+    },
+    "pista@kovidos.hu": {
+        "name": "Kovidos Pista",
+        "taj": "111000222",
+        "address": "Corona al Village",
+        "email": "pista@kovidos.hu",
+        "password": "$2y$10$zbXzA6UHGs3v37zgM20hr.vNRP3wuseVW5xyeWCK.u\/9r561AdWTK",
+        "appointment": {
+            "dayid": "6006a81218c38",
+            "appid": "6006a81218bac"
+        }
+    },
+    "geza@kovidos.hu": {
+        "name": "Kovidos G\u00e9za",
+        "taj": "333444555",
+        "address": "Corona al Village",
+        "email": "geza@kovidos.hu",
+        "password": "$2y$10$ufqGtcWRRauxKhhEoCmQ4eeg\/iGMdplsv7i2mfCtCR28qTo2vArKO",
+        "appointment": {
+            "dayid": "6006a81218c38",
+            "appid": "6006a81218bac"
+        }
+    },
+    "arpad@kovidos.hu": {
+        "name": "Kovidos \u00c1rp\u00e1d",
+        "taj": "123123123",
+        "address": "Corona al Village",
+        "email": "arpad@kovidos.hu",
+        "password": "$2y$10$ILc4dI0o9IUfJFom0rpGa.CkMjadaEot2G9JSYhZ4AEwu0FWwLPGy",
+        "appointment": {
+            "dayid": "6006a81218c38",
+            "appid": "6006a81218bac"
+        }
+    },
+    "viki.orban@kovidos.hu": {
+        "name": "Orb\u00e1n Viktor",
+        "taj": "111111111",
+        "address": "Felcsut ala Palace",
+        "email": "viki.orban@kovidos.hu",
+        "password": "$2y$10$03kwqbwuLH0u5JsWPbaSc.ZR8IMCIeXJL2m7letPMFrYsdWJuIzw.",
+        "appointment": {
+            "dayid": "6006a728e3a38",
+            "appid": "6006a728e39ca"
+        }
+    },
+    "andras@kovidos.hu": {
+        "name": "Kovidos Andras",
+        "taj": "999888999",
+        "address": "Corona al Village",
+        "email": "andras@kovidos.hu",
+        "password": "$2y$10$.Y2CgpOFOyiFA7SnexcaWei6WMnAyR3Et.Kg0PoExlnvY9HhwktzO",
+        "appointment": {
+            "dayid": "6006a81218c38",
+            "appid": "6006a81218bac"
+        }
     }
 }

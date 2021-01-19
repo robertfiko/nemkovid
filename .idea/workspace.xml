@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="Attendance fixing">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attend.php" beforeDir="false" afterPath="$PROJECT_DIR$/attend.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cancel.php" beforeDir="false" afterPath="$PROJECT_DIR$/cancel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createNewAppointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/createNewAppointment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-    </list>
+    <list default="true" id="e4afd8ba-cf0e-4224-823a-0e03dfadb1c1" name="Default Changelist" comment="Finish commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +87,7 @@
       <updated>1609076861529</updated>
       <workItem from="1609076863255" duration="14957000" />
       <workItem from="1609274076198" duration="32000" />
-      <workItem from="1610799386819" duration="52735000" />
+      <workItem from="1610799386819" duration="58088000" />
     </task>
     <task id="LOCAL-00001" summary="Calendar">
       <created>1609107421908</created>
@@ -244,7 +236,28 @@
       <option name="project" value="LOCAL" />
       <updated>1611068282317</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Formatting and fixing">
+      <created>1611069727098</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611069727098</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Formatting and fixing">
+      <created>1611069740585</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1611069740585</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Finish commit">
+      <created>1611081760740</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1611081760740</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +296,9 @@
     <MESSAGE value="Color coding days, also prevent to attend past events" />
     <MESSAGE value="APpointment and user handling" />
     <MESSAGE value="Attendance fixing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attendance fixing" />
+    <MESSAGE value="Formatting and fixing" />
+    <MESSAGE value="Finish commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="523" y="189" key="#Deployment" timestamp="1610806535669">
@@ -299,20 +314,20 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="726" y="225" key="#com.intellij.ide.ui.customization.CustomizableActionsPanel.FindAvailableActionsDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611045291371" />
-    <state x="655" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611069386371">
+    <state x="655" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611069655395">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="655" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1611069386371" />
+    <state x="655" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1792.1120@0.0.1792.1120" timestamp="1611069655395" />
     <state x="655" y="394" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1792.1030@0.25.1792.1030" timestamp="1610809776179" />
     <state x="100" y="125" width="1592" height="790" key="DiffContextDialog" timestamp="1610804998071">
       <screen x="0" y="25" width="1792" height="1030" />
     </state>
     <state x="100" y="125" width="1592" height="790" key="DiffContextDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610804998071" />
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog" timestamp="1611064764868">
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog" timestamp="1611081564619">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611064764868" />
-    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1033@0.25.1792.1033" timestamp="1611062666323" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611081564619" />
+    <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1033@0.25.1792.1033" timestamp="1611081227967" />
     <state x="168" y="238" width="1592" height="856" key="DirDiffDialog/0.25.1792.1034@0.25.1792.1034" timestamp="1611053819216" />
     <state x="834" y="422" width="559" height="198" key="Github.ShareDialog" timestamp="1609078191596">
       <screen x="0" y="25" width="1920" height="992" />
@@ -326,10 +341,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="658" y="290" key="NewPhpClassDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611062311567" />
-    <state x="729" y="477" key="NewPhpFileDialog" timestamp="1611062320233">
+    <state x="729" y="477" key="NewPhpFileDialog" timestamp="1611077936883">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="729" y="477" key="NewPhpFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611062320233" />
+    <state x="729" y="477" key="NewPhpFileDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1611077936883" />
     <state x="729" y="464" key="NewPhpFileDialog/0.25.1792.1030@0.25.1792.1030" timestamp="1610824935973" />
     <state x="781" y="448" key="NewPhpFileDialog/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609106272431" />
     <state x="405" y="142" key="SettingsEditor" timestamp="1611045494145">
@@ -341,10 +356,14 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="254" height="200" key="ShowFilterAction_Filter_Popup/0.0.1792.1120@0.0.1792.1120" timestamp="1610999940907" />
-    <state x="523" y="263" key="Vcs.Push.Dialog.v2" timestamp="1611003854724">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1611081522753">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="523" y="263" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1611003854724" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1792.1120@0.0.1792.1120" timestamp="1611081522753" />
+    <state x="523" y="263" key="Vcs.Push.Dialog.v2" timestamp="1611081763156">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="523" y="263" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1611081763156" />
     <state x="523" y="267" key="Vcs.Push.Dialog.v2/0.25.1792.1030@0.25.1792.1030" timestamp="1610917430672" />
     <state x="523" y="268" key="Vcs.Push.Dialog.v2/0.25.1792.1035@0.25.1792.1035" timestamp="1610955715157" />
     <state x="560" y="258" key="Vcs.Push.Dialog.v2/0.25.1920.992/1920.298.1792.1095@0.25.1920.992" timestamp="1609274096918" />
